@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NullPo Works - インディーゲーム開発</title>
+  <meta name="description" content="NullPo Worksは、パズル・アクション・ホラーなど多彩なモバイルゲームを開発するインディースタジオです。">
+  <meta property="og:title" content="NullPo Works">
+  <meta property="og:description" content="インディーゲーム開発スタジオ">
+  <meta property="og:image" content="https://nullpoworks.github.io/images/og-image.png">
+  <meta property="og:url" content="https://nullpoworks.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nullpo_works">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://nullpoworks.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Analytics (GA4) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NullPo Works",
+    "url": "https://nullpoworks.github.io",
+    "logo": "https://nullpoworks.github.io/images/logo.png",
+    "sameAs": [
+      "https://x.com/nullpo_works"
+    ],
+    "description": "パズル・アクション・ホラーなど多彩なゲームを開発するインディーゲームスタジオ"
+  }
+  </script>
+</head>
+<body>
+  <!-- ========== Header ========== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="header-logo">
+        <img src="images/logo.png" alt="NullPo Works" width="160" height="48">
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#games" class="nav-link">Games</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== Hero ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <img src="images/logo.png" alt="NullPo Works" class="hero-logo" width="320" height="96">
+      <p class="hero-tagline">遊びを、つくる。</p>
+    </div>
+    <a href="#games" class="hero-scroll" aria-label="下にスクロール">
+      <span class="hero-scroll-arrow"></span>
+    </a>
+  </section>
+
+  <main>
+  <!-- ========== Games ========== -->
+  <section class="section games" id="games">
+    <div class="container">
+      <h2 class="section-title">Games</h2>
+      <div class="game-grid">
+        <!-- 魂の共鳴 -->
+        <article class="game-card game-card--portrait">
+          <div class="game-card-portrait-layout">
+            <div class="game-card-image game-card-image--portrait">
+              <img src="images/tamashii-hero.png" alt="魂の共鳴 ～私を信じて～ スクリーンショット" loading="lazy" width="540" height="960">
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-title">魂の共鳴 ～私を信じて～</h3>
+              <div class="game-tags">
+                <span class="game-tag">砂パズル</span>
+                <span class="game-tag">Android / iOS / Web</span>
+              </div>
+              <p class="game-desc">ブロックが砂粒に変化し、同色の砂を左右に繋げて浄化していくパズルゲーム。ヨガの修行僧が邪気を祓う独自の世界観。</p>
+              <div class="game-links">
+                <a href="https://rhynakesora.github.io/tamashii/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Web版で遊ぶ</a>
+                <span class="btn btn-store btn-disabled" aria-disabled="true">
+                  <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 13l2.303-2.492zM5.864 2.658L16.8 9.024l-2.302 2.302L5.864 2.658z"/></svg>
+                  Google Play - Coming Soon
+                </span>
+                <span class="btn btn-store btn-disabled" aria-disabled="true">
+                  <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  App Store - Coming Soon
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ぴよ氏の冒険 -->
+        <article class="game-card">
+          <div class="game-card-image">
+            <img src="images/piyo-hero.png" alt="ぴよ氏の冒険 スクリーンショット" loading="lazy" width="960" height="540">
+          </div>
+          <div class="game-card-body">
+            <h3 class="game-title">ぴよ氏の冒険</h3>
+            <div class="game-tags">
+              <span class="game-tag">エンドレスラン</span>
+              <span class="game-tag">Web / PWA</span>
+            </div>
+            <p class="game-desc">可愛いぴよ氏を操作して障害物を避けながら走り続ける横スクロールアクション。距離300mごとにスピードアップ、最大500%の超高速ステージへ。</p>
+            <div class="game-links">
+              <a href="https://shinomiyapiyo.github.io/games/piyo-adventure/index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Web版で遊ぶ</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 14番地 -->
+        <article class="game-card">
+          <div class="game-card-image">
+            <img src="images/14banchi-hero.png" alt="14番地 スクリーンショット" loading="lazy" width="960" height="540">
+          </div>
+          <div class="game-card-body">
+            <h3 class="game-title">14番地</h3>
+            <div class="game-tags">
+              <span class="game-tag">ホラー</span>
+              <span class="game-tag">Web / PWA</span>
+            </div>
+            <p class="game-desc">不気味な夜道を歩き、街の「異変」を見つけて正しい判断で14番地を目指す横スクロール2Dホラーゲーム。</p>
+            <div class="game-links">
+              <a href="https://shinomiyapiyo.github.io/games/14banchi/index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Web版で遊ぶ</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== About ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-content">
+        <p>NullPo Worksは、日本発のインディーゲーム開発ブランドです。</p>
+        <p>HTML5やJavaScriptなどのWeb技術をベースに、パズル・アクション・ホラーなど多ジャンルのゲームを開発しています。「遊びを、つくる。」を合言葉に、ユニークで面白い体験をお届けします。</p>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="privacy-policy.html" class="footer-link">プライバシーポリシー</a>
+        <a href="https://x.com/nullpo_works" class="footer-link" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 NullPo Works</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
