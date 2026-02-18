@@ -42,7 +42,6 @@
     var ctx = canvas.getContext('2d');
     var particles = [];
     var PARTICLE_COUNT = 60;
-    var mouse = { x: -1000, y: -1000 };
 
     function resize() {
       canvas.width = canvas.offsetWidth;

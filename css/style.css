@@ -92,7 +92,6 @@ a:hover {
 .header-logo img {
   height: 32px;
   width: auto;
-  filter: invert(1);
 }
 
 .nav-list {
@@ -187,7 +186,7 @@ a:hover {
   width: 320px;
   height: auto;
   margin: 0 auto 24px;
-  filter: invert(1) drop-shadow(0 0 40px rgba(123, 92, 255, 0.4));
+  filter: drop-shadow(0 0 40px rgba(123, 92, 255, 0.4));
 }
 
 .hero-tagline {
@@ -321,22 +320,6 @@ a:hover {
     min-width: 0;
     aspect-ratio: auto;
   }
-}
-
-.game-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.badge-coming-soon {
-  background: var(--badge-coming);
-  color: #fff;
 }
 
 .game-card-body {
@@ -513,7 +496,16 @@ a:hover {
 .footer-copy {
   color: var(--text-secondary);
   font-size: 0.8rem;
-  opacity: 0.7;
+}
+
+/* ---------- Subpage Title ---------- */
+.section-title--sub {
+  text-align: left;
+  background: none;
+  -webkit-text-fill-color: var(--text-primary);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
 }
 
 /* ---------- Privacy Policy ---------- */
@@ -571,59 +563,6 @@ a:hover {
   margin-bottom: 40px;
 }
 
-.contact-method {
-  margin-bottom: 36px;
-  padding: 28px;
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  border: 1px solid rgba(123, 92, 255, 0.1);
-}
-
-.contact-method h2 {
-  font-size: 1.1rem;
-  font-weight: 900;
-  margin-bottom: 8px;
-}
-
-.contact-method p {
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.contact-btn {
-  font-size: 1rem;
-  padding: 12px 28px;
-}
-
-.contact-note {
-  margin-bottom: 36px;
-}
-
-.contact-note h2 {
-  font-size: 1.1rem;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-.contact-note ul {
-  padding-left: 20px;
-  margin-bottom: 16px;
-}
-
-.contact-note li {
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.9;
-  margin-bottom: 4px;
-}
-
-.contact-note p {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-}
-
 /* Contact Form */
 .contact-form {
   margin-bottom: 40px;
@@ -672,9 +611,10 @@ a:hover {
 }
 
 .form-input:focus {
-  outline: none;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(123, 92, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(123, 92, 255, 0.3);
 }
 
 .form-select {
@@ -1093,18 +1033,6 @@ a:hover {
   font-size: 0.95rem;
   line-height: 1.8;
   margin-bottom: 20px;
-}
-
-.beta-support-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.beta-support-links .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
 }
 
 /* Notice */

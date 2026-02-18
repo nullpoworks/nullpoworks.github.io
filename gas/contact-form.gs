@@ -26,7 +26,7 @@
  */
 
 // ===== 設定 =====
-var NOTIFY_EMAIL = 'info@rhyn.jp';
+var NOTIFY_EMAIL = 'rhyn_akesora@proton.me';
 var SHEET_ID = ''; // オプション: スプレッドシートID（空なら記録しない）
 var SHEET_NAME = 'お問い合わせ';
 

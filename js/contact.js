@@ -5,8 +5,7 @@
 (function () {
   'use strict';
 
-  // TODO: Replace with your deployed Google Apps Script Web App URL
-  var GAS_URL = 'YOUR_GAS_WEB_APP_URL';
+  var GAS_URL = 'https://script.google.com/macros/s/AKfycbwb27eb-33QUtW2tWOJb8XSkJLEY8G8KtXYuvCEI7eOvvQUQOG-tPWGhisoDgxe9DcOCg/exec';
 
   var form = document.getElementById('contact-form');
   var submitBtn = document.getElementById('contact-submit');
