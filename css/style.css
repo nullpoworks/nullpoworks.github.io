@@ -1017,6 +1017,50 @@ a:hover {
   opacity: 0.7;
 }
 
+.beta-steps-intro {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* Step screenshot */
+.beta-step-image {
+  position: relative;
+  margin: 16px 0;
+  max-width: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(123, 92, 255, 0.15);
+}
+
+.beta-step-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.beta-step-image-indicator {
+  position: absolute;
+  border: 3px solid #ff4444;
+  border-radius: 8px;
+  pointer-events: none;
+  box-shadow: 0 0 12px rgba(255, 68, 68, 0.5);
+  animation: beta-pulse 2s ease-in-out infinite;
+}
+
+@keyframes beta-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(255, 68, 68, 0.5); }
+  50% { box-shadow: 0 0 24px rgba(255, 68, 68, 0.8); }
+}
+
+/* CTA lead text */
+.beta-cta-lead {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
 /* CTA */
 .beta-cta {
   text-align: center;
@@ -1091,16 +1135,14 @@ a:hover {
     padding: 20px;
   }
 
+  .beta-step-image {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .beta-cta-btn {
     font-size: 1rem;
     padding: 16px 28px;
-  }
-
-  .beta-support-links {
-    flex-direction: column;
-  }
-
-  .beta-support-links .btn {
-    justify-content: center;
   }
 }
