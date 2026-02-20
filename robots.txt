@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /beta-test.html
+Disallow: /14banchi-beta.html
 Sitemap: https://nullpoworks.github.io/sitemap.xml
