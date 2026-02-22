@@ -670,6 +670,73 @@ a:hover {
   border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
+.contact-faq {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(123, 92, 255, 0.1);
+}
+
+.contact-faq-title {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+
+.faq-question {
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  list-style: none;
+}
+
+.faq-question::before {
+  content: 'Q. ';
+  color: var(--accent);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-answer {
+  padding: 0 18px 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+.faq-answer ol {
+  margin: 8px 0 8px 1.4em;
+}
+
+.faq-answer ul {
+  margin: 4px 0 4px 1.2em;
+  list-style: disc;
+}
+
+.faq-answer li {
+  margin-bottom: 4px;
+}
+
+.about-help-link {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.about-help-link a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .contact-alt {
   margin-top: 40px;
   padding-top: 32px;
@@ -1072,5 +1139,346 @@ a:hover {
   .beta-cta-btn {
     font-size: 1rem;
     padding: 16px 28px;
+  }
+}
+
+/* ========================================
+   Beta Page - Forms & Lists
+   ======================================== */
+
+.beta-section-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.beta-form {
+  margin-bottom: 32px;
+}
+
+.beta-form .form-group {
+  margin-bottom: 16px;
+}
+
+.beta-form-submit {
+  padding: 12px 32px;
+}
+
+/* Placeholder */
+.beta-placeholder {
+  background: var(--bg-card);
+  border: 1px dashed rgba(123, 92, 255, 0.3);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.beta-placeholder p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Lists */
+.beta-list-section {
+  margin-top: 24px;
+}
+
+.beta-list-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(123, 92, 255, 0.15);
+}
+
+.beta-list-loading,
+.beta-list-empty {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding: 16px 0;
+}
+
+/* Registration list */
+.beta-reg-list {
+  list-style: none;
+}
+
+.beta-reg-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.beta-reg-item:last-child {
+  border-bottom: none;
+}
+
+.beta-reg-name {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.beta-reg-date {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+/* Chat list */
+.beta-chat-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.beta-chat-msg {
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  border: 1px solid rgba(123, 92, 255, 0.08);
+}
+
+.beta-chat-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.beta-chat-name {
+  color: var(--accent-glow);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.beta-chat-date {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.beta-chat-text {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.beta-privacy-note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(123, 92, 255, 0.05);
+  border: 1px solid rgba(123, 92, 255, 0.15);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-align: center;
+}
+
+.beta-privacy-note a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.beta-privacy-detail {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+.beta-privacy-detail h3 {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  margin-top: 20px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.beta-privacy-detail ul {
+  margin: 4px 0 8px 1.4em;
+  list-style: disc;
+}
+
+.beta-privacy-detail li {
+  margin-bottom: 2px;
+}
+
+.beta-privacy-detail a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.beta-privacy-detail p {
+  margin-bottom: 6px;
+}
+
+.beta-privacy-update {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* ---------- Tester Recruitment Banner ---------- */
+.tester-recruit {
+  padding: 40px 0;
+}
+
+.tester-recruit-banner {
+  background: linear-gradient(135deg, rgba(123, 92, 255, 0.12), rgba(0, 212, 255, 0.08));
+  border: 1px solid rgba(123, 92, 255, 0.25);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.tester-recruit-title {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.tester-recruit-desc {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.tester-recruit-btn {
+  display: inline-block;
+}
+
+/* ---------- Tester Page: Nav ---------- */
+.beta-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+}
+
+.beta-nav-link {
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border: 1px solid rgba(123, 92, 255, 0.2);
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+.beta-nav-link:hover {
+  color: var(--accent-glow);
+  border-color: var(--accent);
+  background: rgba(123, 92, 255, 0.1);
+}
+
+/* ---------- Tester Page: App sections ---------- */
+.beta-app-section {
+  border-top: 2px solid rgba(123, 92, 255, 0.2);
+  padding-top: 32px;
+}
+
+.beta-app-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.beta-app-icon {
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.beta-app-title {
+  margin-bottom: 4px;
+}
+
+.beta-app-tag {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: rgba(123, 92, 255, 0.1);
+  padding: 2px 10px;
+  border-radius: 50px;
+}
+
+.beta-sub-heading {
+  font-size: 1rem;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.beta-hero-logo {
+  margin: 0 auto 12px;
+  filter: drop-shadow(0 0 20px rgba(123, 92, 255, 0.3));
+}
+
+/* ========================================
+   404 Error Page
+   ======================================== */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--header-height);
+}
+
+.error-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.error-code {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--accent-glow), var(--neon-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 40px rgba(123, 92, 255, 0.3));
+}
+
+.error-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.error-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.error-btn {
+  font-size: 1rem;
+  padding: 14px 36px;
+}
+
+@media (max-width: 767px) {
+  .error-code {
+    font-size: 5rem;
+  }
+
+  .error-title {
+    font-size: 1.3rem;
   }
 }
