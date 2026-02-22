@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>クローズドβテスト - 魂の共鳴 ～私を信じて～</title>
+  <title>テスターページ - NullPo Works</title>
+  <meta name="description" content="NullPo Worksのクローズドテストにご参加いただくためのテスター登録ページです。">
+  <meta property="og:title" content="テスターページ - NullPo Works">
+  <meta property="og:description" content="NullPo Worksのクローズドテストにご参加いただくためのテスター登録ページです。">
+  <meta property="og:image" content="https://nullpoworks.github.io/images/og-image.png">
+  <meta property="og:url" content="https://nullpoworks.github.io/beta-test.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nullpo_works">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -29,38 +37,86 @@
 
       <!-- ========== Hero ========== -->
       <div class="beta-hero">
-        <img src="images/tamashii-icon-512.png" alt="魂の共鳴 アイコン" class="beta-hero-icon" width="96" height="96">
-        <h1 class="beta-hero-title">『魂の共鳴 ～私を信じて～』<br>クローズドβテストへようこそ！</h1>
-        <p class="beta-hero-sub">テストにご参加いただきありがとうございます。<br>このページでは、アプリのインストール方法を画像付きでご案内します。</p>
+        <img src="images/logo-white.png" alt="NullPo Works" class="beta-hero-logo" width="200" height="60">
+        <h1 class="beta-hero-title">NullPo Works<br>テスターページ</h1>
+        <p class="beta-hero-sub">NullPo Worksのクローズドテストにご参加いただきありがとうございます。<br>このページからテスター登録、各アプリのインストール、バグ報告ができます。</p>
       </div>
 
-      <!-- ========== 注意事項 ========== -->
+      <!-- ========== ページ内ナビ ========== -->
+      <nav class="beta-nav">
+        <a href="#register" class="beta-nav-link">テスター登録</a>
+        <a href="#tamashii" class="beta-nav-link">魂の共鳴</a>
+        <a href="#14banchi" class="beta-nav-link">14番地</a>
+        <a href="#chat" class="beta-nav-link">バグ報告</a>
+      </nav>
+
+      <!-- ========== テスター登録 ========== -->
+      <section class="beta-section" id="register">
+        <h2 class="beta-section-title">テスター登録</h2>
+        <p class="beta-section-desc">NullPo Worksのテスターとして登録すると、開発中のアプリをいち早く体験できます。<br>Google Playで使用しているGoogleアカウント（Gmailアドレス）を登録してください。<br>登録後、管理者がGoogle Playにアカウントを追加します。テストが稼働中のアプリは、通常24時間以内にダウンロード可能になります。<br>「準備中」と表示されているアプリは、テスト開始までしばらくお待ちください。</p>
+
+        <form id="register-form" class="beta-form" novalidate>
+          <div class="form-group">
+            <label for="register-name" class="form-label">名前 <span class="form-optional">（任意・ニックネーム可）</span></label>
+            <input type="text" id="register-name" name="name" class="form-input" placeholder="例: テスト太郎" maxlength="50">
+          </div>
+          <div class="form-group">
+            <label for="register-email" class="form-label">Googleアカウント（Gmailアドレス） <span class="form-required">*</span></label>
+            <input type="email" id="register-email" name="email" class="form-input" placeholder="example@gmail.com" required maxlength="254">
+          </div>
+          <div class="beta-privacy-note">
+            <p>「登録する」を押すことで、下記の<a href="#privacy">個人情報の取り扱いについて</a>に同意したものとみなします。</p>
+          </div>
+          <button type="submit" id="register-submit" class="btn btn-primary beta-form-submit">登録する</button>
+          <div id="register-status" class="contact-status" role="alert" aria-live="polite" hidden></div>
+        </form>
+
+        <div class="beta-list-section">
+          <h3 class="beta-list-title">登録済みテスター</h3>
+          <div id="register-list" class="beta-list">
+            <p class="beta-list-loading">読み込み中...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== 注意事項（共通） ========== -->
       <section class="beta-section beta-alert">
-        <div class="beta-alert-icon">⚠️</div>
+        <div class="beta-alert-icon">&#x26A0;&#xFE0F;</div>
         <h2 class="beta-section-title">はじめにご確認ください</h2>
         <div class="beta-alert-body">
           <p class="beta-alert-main">テスターとして<strong>登録したGoogleアカウント</strong>でスマートフォンにログインしていますか？</p>
           <p class="beta-alert-desc">違うGoogleアカウントでログインしていると、Google Playに「このアプリは利用できません」と表示されてインストールできません。</p>
           <div class="beta-alert-check">
-            <p>✅ 登録したGoogleアカウントでログインしている → このまま進んでください</p>
-            <p>🔄 わからない・違うアカウントかも → スマートフォンの <strong>「設定」→「アカウント」</strong> からGoogleアカウントを確認してください</p>
+            <p>&#x2705; 登録したGoogleアカウントでログインしている &#x2192; このまま進んでください</p>
+            <p>&#x1F504; わからない・違うアカウントかも &#x2192; スマートフォンの <strong>「設定」&#x2192;「アカウント」</strong> からGoogleアカウントを確認してください</p>
           </div>
         </div>
       </section>
 
-      <!-- ========== CTA ========== -->
-      <section class="beta-section beta-cta">
-        <p class="beta-cta-lead">アカウントの確認ができたら、下のボタンからテストに参加しましょう。</p>
-        <a href="https://play.google.com/apps/testing/works.nullpo.tamashii" class="btn btn-primary beta-cta-btn" target="_blank" rel="noopener noreferrer">
-          <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 13l2.303-2.492zM5.864 2.658L16.8 9.024l-2.302 2.302L5.864 2.658z"/></svg>
-          テストに参加してインストールする
-        </a>
-        <p class="beta-cta-note">ボタンを押すと Google Play のテスト参加ページが開きます</p>
-      </section>
+      <!-- ====================================================
+           魂の共鳴
+           ==================================================== -->
+      <section class="beta-section beta-app-section" id="tamashii">
+        <div class="beta-app-header">
+          <img src="images/tamashii-icon-512.png" alt="" class="beta-app-icon" width="56" height="56">
+          <div>
+            <h2 class="beta-section-title beta-app-title">魂の共鳴 ～私を信じて～</h2>
+            <span class="beta-app-tag">砂パズル / Android</span>
+          </div>
+        </div>
 
-      <!-- ========== 3ステップガイド ========== -->
-      <section class="beta-section">
-        <h2 class="beta-section-title">インストール手順（3ステップ）</h2>
+        <!-- CTA -->
+        <div class="beta-cta">
+          <p class="beta-cta-lead">アカウントの確認ができたら、下のボタンからテストに参加しましょう。</p>
+          <a href="https://play.google.com/apps/testing/works.nullpo.tamashii" class="btn btn-primary beta-cta-btn" target="_blank" rel="noopener noreferrer">
+            <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 13l2.303-2.492zM5.864 2.658L16.8 9.024l-2.302 2.302L5.864 2.658z"/></svg>
+            テストに参加してインストールする
+          </a>
+          <p class="beta-cta-note">ボタンを押すと Google Play のテスト参加ページが開きます</p>
+        </div>
+
+        <!-- 3ステップガイド -->
+        <h3 class="beta-sub-heading">インストール手順（3ステップ）</h3>
         <p class="beta-steps-intro">上のボタンを押した後の流れを、実際の画面で説明します。</p>
 
         <div class="beta-steps">
@@ -68,7 +124,7 @@
           <div class="beta-step">
             <div class="beta-step-number">1</div>
             <div class="beta-step-content">
-              <h3 class="beta-step-title">「テスターになる」を押す</h3>
+              <h4 class="beta-step-title">「テスターになる」を押す</h4>
               <p>ボタンを押すと、下のような画面が開きます。<br>画面の一番下にある<strong>「テスターになる」</strong>ボタンを押してください。これがテストへの参加表明になります。</p>
               <p class="beta-step-note">※ 最初は英語で <strong>"Become a tester"</strong> と表示される場合があります。下の画像は日本語に翻訳した状態です。ページを日本語に翻訳してから操作すると分かりやすいのでおすすめです。</p>
               <div class="beta-step-image">
@@ -83,7 +139,7 @@
           <div class="beta-step">
             <div class="beta-step-number">2</div>
             <div class="beta-step-content">
-              <h3 class="beta-step-title">「Google Play でダウンロード」を押す</h3>
+              <h4 class="beta-step-title">「Google Play でダウンロード」を押す</h4>
               <p>「あなたはテスターです。」（英語では <strong>"You're a tester"</strong>）と表示されたら参加完了です！<br>画面の中にある青い文字の<strong>「Google Play でダウンロードしてください」</strong>（英語では <strong>"download it on Google Play"</strong>）というリンクを押してください。</p>
               <div class="beta-step-image">
                 <img src="images/tester02.jpg" alt="ステップ2: Google Playでダウンロードリンクを押す画面" loading="lazy">
@@ -97,7 +153,7 @@
           <div class="beta-step">
             <div class="beta-step-number">3</div>
             <div class="beta-step-content">
-              <h3 class="beta-step-title">「インストール」を押す</h3>
+              <h4 class="beta-step-title">「インストール」を押す</h4>
               <p>Google Playのアプリページが開きます。<br>青色の<strong>「インストール」</strong>ボタンを押せば、ダウンロードが始まります。これで完了です！</p>
               <div class="beta-step-image">
                 <img src="images/tester03.jpg" alt="ステップ3: インストールボタンを押す画面" loading="lazy">
@@ -106,18 +162,115 @@
             </div>
           </div>
         </div>
+
+        <div class="beta-alert-body" style="margin-top: 1.5rem;">
+          <p class="beta-alert-main">&#x1F4F2; <strong>インストール後、必ず一度アプリを起動してください。</strong></p>
+          <p class="beta-alert-desc">ダウンロードしただけではテストへの参加が完了しません。アプリを一度起動することで、正式にテスト参加者として登録されます。</p>
+        </div>
       </section>
 
-      <!-- ========== サポート ========== -->
-      <section class="beta-section beta-support">
-        <h2 class="beta-section-title">お困りのときは</h2>
-        <p>インストールがうまくいかない場合やバグを見つけた場合は、お気軽にご連絡ください。</p>
+      <!-- ====================================================
+           14番地
+           ==================================================== -->
+      <section class="beta-section beta-app-section" id="14banchi">
+        <div class="beta-app-header">
+          <img src="images/14banchi-icon-512.png" alt="" class="beta-app-icon" width="56" height="56">
+          <div>
+            <h2 class="beta-section-title beta-app-title">14番地</h2>
+            <span class="beta-app-tag">ホラー / Android</span>
+          </div>
+        </div>
+
+        <div class="beta-placeholder">
+          <p>&#x1F527; 現在準備中です。テスト開始までしばらくお待ちください。<br>テストが稼働しましたら、こちらにインストール手順を掲載します。</p>
+        </div>
+      </section>
+
+      <!-- ========== バグ報告チャット ========== -->
+      <section class="beta-section" id="chat">
+        <h2 class="beta-section-title">バグ報告・フィードバック</h2>
+        <p class="beta-section-desc">バグの報告、ご意見、ご感想など何でもお気軽に投稿してください。<br>全アプリ共通の掲示板です。どのアプリについてかを書き添えていただけると助かります。<br>他のテスターの投稿も確認できます。</p>
+
+        <form id="chat-form" class="beta-form" novalidate>
+          <div class="form-group">
+            <label for="chat-name" class="form-label">名前 <span class="form-optional">（任意・ニックネーム可）</span></label>
+            <input type="text" id="chat-name" name="name" class="form-input" placeholder="例: テスト太郎" maxlength="50">
+          </div>
+          <div class="form-group">
+            <label for="chat-message" class="form-label">メッセージ <span class="form-required">*</span></label>
+            <textarea id="chat-message" name="message" class="form-input form-textarea" placeholder="例: 【魂の共鳴】ステージ3でブロックが消えない&#10;&#10;バグの詳細、再現手順、ご意見など" required maxlength="2000" rows="4"></textarea>
+          </div>
+          <button type="submit" id="chat-submit" class="btn btn-primary beta-form-submit">投稿する</button>
+          <div id="chat-status" class="contact-status" role="alert" aria-live="polite" hidden></div>
+        </form>
+
+        <div class="beta-list-section">
+          <h3 class="beta-list-title">投稿一覧</h3>
+          <div id="chat-list" class="beta-chat-list">
+            <p class="beta-list-loading">読み込み中...</p>
+          </div>
+        </div>
       </section>
 
       <!-- ========== 注意書き ========== -->
       <section class="beta-section beta-notice">
-        <p>⚠️ このテストは招待制です。テストの内容やスクリーンショットの公開はお控えください。</p>
-        <p>📱 対応端末：Android のみ（iOS版は準備中です）</p>
+        <p>&#x26A0;&#xFE0F; このテストは登録制です。テストの内容やスクリーンショットの公開はお控えください。</p>
+        <p>&#x1F4F1; 対応端末：Android のみ（iOS版は準備中です）</p>
+        <p>&#x1F504; テスト版は不定期にアップデートされます。Google Playの自動更新が有効であれば自動的に最新版に更新されますが、最新バージョンの確認やインストールは各アプリのダウンロードリンク（Google Playページ）から行ってください。</p>
+        <p>&#x1F4AC; 何かお困りのことがあれば、お気軽にご連絡ください。</p>
+      </section>
+
+      <!-- ========== 個人情報の取り扱い ========== -->
+      <section class="beta-section beta-privacy" id="privacy">
+        <h2 class="beta-section-title">個人情報の取り扱いについて</h2>
+        <div class="beta-privacy-detail">
+          <p>NullPo Works（以下「当方」）は、個人情報の保護に関する法律（個人情報保護法）に基づき、本ページで取得する個人情報を以下のとおり取り扱います。</p>
+
+          <h3>1. 個人情報の管理者</h3>
+          <p>NullPo Works（Veriquest IT事業部）<br>連絡先：<a href="contact.html" target="_blank" rel="noopener">お問い合わせページ</a></p>
+
+          <h3>2. 取得する個人情報</h3>
+          <ul>
+            <li>Googleアカウント（Gmailアドレス）</li>
+            <li>名前またはニックネーム（任意）</li>
+            <li>バグ報告・フィードバックの投稿内容</li>
+          </ul>
+
+          <h3>3. 利用目的</h3>
+          <p>取得した個人情報は、以下の目的にのみ使用いたします。</p>
+          <ul>
+            <li>Google Playクローズドテストへの参加者登録・管理</li>
+            <li>テスト用アプリの配信設定（Google Play Consoleへのテスターアカウント追加）</li>
+            <li>テストに関するご連絡・ご案内</li>
+            <li>バグ報告・フィードバックの管理および改善対応</li>
+          </ul>
+          <p>上記以外の目的で利用することはありません。</p>
+
+          <h3>4. 第三者への提供</h3>
+          <p>取得した個人情報は、以下の場合を除き第三者に提供いたしません。</p>
+          <ul>
+            <li>ご本人の同意がある場合</li>
+            <li>法令に基づく場合</li>
+            <li>テストの実施に必要な範囲でGoogle Play Consoleに登録する場合（Gmailアドレスのみ）</li>
+          </ul>
+
+          <h3>5. 安全管理措置</h3>
+          <p>取得した個人情報は、Google スプレッドシートにて暗号化通信（SSL/TLS）を用いて安全に管理し、不正アクセス・漏洩・紛失の防止に努めます。アクセス権限は当方の管理者のみに限定しています。</p>
+
+          <h3>6. 保有期間と削除</h3>
+          <p>個人情報は、クローズドテスト終了後、合理的な期間内に削除いたします。テスト期間中であっても、ご本人からの削除依頼があった場合は速やかに対応いたします。</p>
+
+          <h3>7. 開示・訂正・削除の請求</h3>
+          <p>ご本人は、個人情報保護法に基づき、ご自身の個人情報について開示・訂正・削除を請求する権利を有します。ご希望の方は<a href="contact.html" target="_blank" rel="noopener">お問い合わせページ</a>よりご連絡ください。</p>
+
+          <h3>8. 任意性</h3>
+          <p>個人情報の提供は任意ですが、Gmailアドレスをご提供いただけない場合、テストへの参加ができない場合があります。</p>
+
+          <h3>9. バグ報告チャットについて</h3>
+          <p>バグ報告・フィードバック欄に入力された名前と投稿内容は、テスト参加者全員に表示されます。公開を望まない情報は投稿しないようご注意ください。個人を特定する情報（メールアドレス・電話番号等）の投稿はお控えください。</p>
+
+          <p class="beta-privacy-update">最終更新日：2026年2月23日</p>
+        </div>
       </section>
 
     </div>
@@ -131,5 +284,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/tester.js"></script>
 </body>
 </html>
