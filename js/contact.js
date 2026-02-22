@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  var GAS_URL = 'https://script.google.com/macros/s/AKfycbwb27eb-33QUtW2tWOJb8XSkJLEY8G8KtXYuvCEI7eOvvQUQOG-tPWGhisoDgxe9DcOCg/exec';
+  var GAS_URL = 'https://script.google.com/macros/s/AKfycby7k7Y-STAuS6R5yGpErPGb23ZI-psV64TAn25ym_nZKBYkLTJrm7SIVu5PIVDNwflVWw/exec';
 
   var form = document.getElementById('contact-form');
   var submitBtn = document.getElementById('contact-submit');
