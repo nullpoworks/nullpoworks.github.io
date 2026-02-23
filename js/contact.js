@@ -59,6 +59,13 @@
       return;
     }
 
+    var confirmMsg = 'この内容で送信します。よろしいですか？\n\n'
+      + '種別: ' + category + '\n'
+      + '名前: ' + (name || '未記入') + '\n'
+      + 'メール: ' + (email || '未記入') + '\n'
+      + '内容: ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
+    if (!confirm(confirmMsg)) return;
+
     // Disable button
     submitBtn.disabled = true;
     submitBtn.textContent = '送信中...';

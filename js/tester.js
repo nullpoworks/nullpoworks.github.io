@@ -127,6 +127,11 @@
         return;
       }
 
+      var confirmMsg = '以下の内容で登録します。よろしいですか？\n\n'
+        + '名前: ' + (name || '匿名') + '\n'
+        + 'Googleアカウント: ' + email;
+      if (!confirm(confirmMsg)) return;
+
       regSubmit.disabled = true;
       regSubmit.textContent = '送信中...';
       showStatus(regStatus, '', '');
@@ -175,6 +180,11 @@
         showStatus(chatStatus, 'メッセージは2000文字以内で入力してください。', 'error');
         return;
       }
+
+      var confirmMsg = 'この内容で投稿します。よろしいですか？\n\n'
+        + '名前: ' + (name || '匿名') + '\n'
+        + 'メッセージ: ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
+      if (!confirm(confirmMsg)) return;
 
       chatSubmit.disabled = true;
       chatSubmit.textContent = '送信中...';
