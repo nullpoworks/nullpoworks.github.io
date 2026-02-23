@@ -23,12 +23,25 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ========== Header (minimal) ========== -->
+  <!-- ========== Header ========== -->
   <header class="header" id="header">
     <div class="header-inner">
-      <span class="header-logo">
+      <a href="index.html" class="header-logo">
         <img src="images/logo-white.png" alt="NullPo Works" width="160" height="48">
-      </span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html#games" class="nav-link">Games</a></li>
+          <li><a href="index.html#apps" class="nav-link">Apps</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
   </header>
 
