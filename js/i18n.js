@@ -29,7 +29,7 @@ window.I18n = (function () {
       'game.tamashii.title': '魂の共鳴 ～私を信じて～',
       'game.tamashii.tag1': '砂パズル',
       'game.tamashii.desc': 'ブロックが砂粒に変化し、同色の砂を左右に繋げて浄化していくパズルゲーム。ヨガの修行僧が邪気を祓う独自の世界観。',
-      'game.tamashii.lang': '日本語',
+      'game.tamashii.lang': '日本語 / English',
       'game.tamashii.play': 'Web版で遊ぶ',
       // ぴよ氏の冒険
       'game.piyo.title': 'ぴよ氏の冒険',
@@ -256,7 +256,7 @@ window.I18n = (function () {
       'game.tamashii.title': 'Tamashii no Kyoumei ~Believe in Me~',
       'game.tamashii.tag1': 'Sand Puzzle',
       'game.tamashii.desc': 'A puzzle game where blocks turn into grains of sand — connect same-colored sand to purify them. A unique world where a yoga monk banishes evil spirits.',
-      'game.tamashii.lang': 'Japanese',
+      'game.tamashii.lang': 'Japanese / English',
       'game.tamashii.play': 'Play Web Version',
       // Piyo-shi no Bouken
       'game.piyo.title': "Piyo's Adventure",
