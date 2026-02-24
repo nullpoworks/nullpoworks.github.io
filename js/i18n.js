@@ -29,16 +29,19 @@ window.I18n = (function () {
       'game.tamashii.title': '魂の共鳴 ～私を信じて～',
       'game.tamashii.tag1': '砂パズル',
       'game.tamashii.desc': 'ブロックが砂粒に変化し、同色の砂を左右に繋げて浄化していくパズルゲーム。ヨガの修行僧が邪気を祓う独自の世界観。',
+      'game.tamashii.lang': '日本語',
       'game.tamashii.play': 'Web版で遊ぶ',
       // ぴよ氏の冒険
       'game.piyo.title': 'ぴよ氏の冒険',
       'game.piyo.tag1': 'エンドレスラン',
       'game.piyo.desc': '可愛いぴよ氏を操作して障害物を避けながら走り続ける横スクロールアクション。距離300mごとにスピードアップ、最大500%の超高速ステージへ。',
+      'game.piyo.lang': '日本語',
       'game.piyo.play': 'Web版で遊ぶ',
       // 14番地
       'game.14banchi.title': '14番地',
       'game.14banchi.tag1': 'ホラー',
       'game.14banchi.desc': '不気味な夜道を歩き、街の「異変」を見つけて正しい判断で14番地を目指す横スクロール2Dホラーゲーム。',
+      'game.14banchi.lang': '日本語',
       'game.14banchi.play': 'Web版で遊ぶ',
       // 画像alt
       'alt.tamashii.hero': '魂の共鳴 ～私を信じて～ スクリーンショット',
@@ -253,16 +256,19 @@ window.I18n = (function () {
       'game.tamashii.title': 'Tamashii no Kyoumei ~Believe in Me~',
       'game.tamashii.tag1': 'Sand Puzzle',
       'game.tamashii.desc': 'A puzzle game where blocks turn into grains of sand — connect same-colored sand to purify them. A unique world where a yoga monk banishes evil spirits.',
+      'game.tamashii.lang': 'Japanese',
       'game.tamashii.play': 'Play Web Version',
       // Piyo-shi no Bouken
       'game.piyo.title': "Piyo's Adventure",
       'game.piyo.tag1': 'Endless Runner',
       'game.piyo.desc': 'A side-scrolling action game where you control cute Piyo and dodge obstacles. Speed increases every 300m, reaching up to 500% ultra-fast stages.',
+      'game.piyo.lang': 'Japanese',
       'game.piyo.play': 'Play Web Version',
       // 14-banchi
       'game.14banchi.title': '14-banchi',
       'game.14banchi.tag1': 'Horror',
       'game.14banchi.desc': 'A side-scrolling 2D horror game where you walk through eerie streets at night, spot anomalies, and make the right choices to reach 14-banchi.',
+      'game.14banchi.lang': 'Japanese',
       'game.14banchi.play': 'Play Web Version',
       // Image alt
       'alt.tamashii.hero': 'Tamashii no Kyoumei ~Believe in Me~ Screenshot',
