@@ -12,7 +12,6 @@
   var regForm = document.getElementById('register-form');
   var regSubmit = document.getElementById('register-submit');
   var regStatus = document.getElementById('register-status');
-  var regList = document.getElementById('register-list');
 
   // ===== チャット =====
   var chatForm = document.getElementById('chat-form');
@@ -39,23 +38,6 @@
     var hours = String(d.getHours()).padStart(2, '0');
     var minutes = String(d.getMinutes()).padStart(2, '0');
     return month + '/' + day + ' ' + hours + ':' + minutes;
-  }
-
-  // ===== テスター登録一覧を表示 =====
-  function renderRegistrations(data) {
-    if (!regList) return;
-    if (!data || data.length === 0) {
-      regList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.no_registrations')) + '</p>';
-      return;
-    }
-    var html = '<ul class="beta-reg-list">';
-    for (var i = 0; i < data.length; i++) {
-      var name = escapeHtml(data[i].name || I18n.t('js.tester.anonymous'));
-      var date = formatDate(data[i].timestamp);
-      html += '<li class="beta-reg-item"><span class="beta-reg-name">' + name + '</span><span class="beta-reg-date">' + date + '</span></li>';
-    }
-    html += '</ul>';
-    regList.innerHTML = html;
   }
 
   // ===== チャット一覧を表示 =====
@@ -88,18 +70,9 @@
   // ===== データ取得 =====
   function loadData() {
     if (!GAS_URL || GAS_URL.indexOf('YOUR_') === 0) {
-      if (regList) regList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.gas_not_set')) + '</p>';
       if (chatList) chatList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.gas_not_set')) + '</p>';
       return;
     }
-
-    // テスター登録一覧
-    fetch(GAS_URL + '?action=registrations')
-      .then(function (res) { return res.json(); })
-      .then(function (data) { renderRegistrations(data); })
-      .catch(function () {
-        if (regList) regList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.loading_error')) + '</p>';
-      });
 
     // チャット一覧
     fetch(GAS_URL + '?action=chat')

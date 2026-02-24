@@ -40,6 +40,14 @@ window.I18n = (function () {
       'game.14banchi.tag1': 'ホラー',
       'game.14banchi.desc': '不気味な夜道を歩き、街の「異変」を見つけて正しい判断で14番地を目指す横スクロール2Dホラーゲーム。',
       'game.14banchi.play': 'Web版で遊ぶ',
+      // 画像alt
+      'alt.tamashii.hero': '魂の共鳴 ～私を信じて～ スクリーンショット',
+      'alt.piyo.hero': 'ぴよ氏の冒険 スクリーンショット',
+      'alt.14banchi.hero': '14番地 スクリーンショット',
+      'alt.logica.hero': 'Logica -論理学の問題集- スクリーンショット',
+      'alt.tester.step1': 'ステップ1: テスターになるボタンを押す画面',
+      'alt.tester.step2': 'ステップ2: Google Playでダウンロードリンクを押す画面',
+      'alt.tester.step3': 'ステップ3: インストールボタンを押す画面',
       // テスター募集バナー
       'recruit.title': 'Android版テストユーザー募集中',
       'recruit.desc': '開発中のアプリをいち早く体験してみませんか？<br>テスターとして登録すると、リリース前のアプリをGoogle Playからインストールできます。',
@@ -256,6 +264,14 @@ window.I18n = (function () {
       'game.14banchi.tag1': 'Horror',
       'game.14banchi.desc': 'A side-scrolling 2D horror game where you walk through eerie streets at night, spot anomalies, and make the right choices to reach 14-banchi.',
       'game.14banchi.play': 'Play Web Version',
+      // Image alt
+      'alt.tamashii.hero': 'Tamashii no Kyoumei ~Believe in Me~ Screenshot',
+      'alt.piyo.hero': "Piyo's Adventure Screenshot",
+      'alt.14banchi.hero': '14-banchi Screenshot',
+      'alt.logica.hero': 'Logica - Logic Problem Set - Screenshot',
+      'alt.tester.step1': 'Step 1: Tap the Become a tester button',
+      'alt.tester.step2': 'Step 2: Tap the download it on Google Play link',
+      'alt.tester.step3': 'Step 3: Tap the Install button',
       // Tester Recruitment Banner
       'recruit.title': 'Android Beta Testers Wanted',
       'recruit.desc': 'Want to be among the first to try our apps in development?<br>Register as a tester to install pre-release apps from Google Play.',
@@ -483,6 +499,11 @@ window.I18n = (function () {
     // data-i18n-aria  → aria-label
     document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
       el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
+    });
+
+    // data-i18n-alt  → alt
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      el.setAttribute('alt', t(el.getAttribute('data-i18n-alt')));
     });
 
     // data-i18n-meta  → content (meta tags)
