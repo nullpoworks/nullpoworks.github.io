@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - ページが見つかりません - NullPo Works</title>
+  <title data-i18n="meta.title.404">404 - ページが見つかりません - NullPo Works</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0a0a0f">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -29,7 +29,8 @@
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="メニュー" data-i18n-aria="hamburger.aria" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -40,9 +41,9 @@
   <main class="error-page">
     <div class="container error-container">
       <p class="error-code">404</p>
-      <h1 class="error-title">ページが見つかりません</h1>
-      <p class="error-desc">お探しのページは存在しないか、移動された可能性があります。</p>
-      <a href="index.html" class="btn btn-primary error-btn">トップページへ戻る</a>
+      <h1 class="error-title" data-i18n="error.title">ページが見つかりません</h1>
+      <p class="error-desc" data-i18n="error.desc">お探しのページは存在しないか、移動された可能性があります。</p>
+      <a href="index.html" class="btn btn-primary error-btn" data-i18n="error.btn">トップページへ戻る</a>
     </div>
   </main>
 
@@ -50,14 +51,15 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
-        <a href="privacy-policy.html" class="footer-link">プライバシーポリシー</a>
-        <a href="contact.html" class="footer-link">お問い合わせ</a>
+        <a href="privacy-policy.html" class="footer-link" data-i18n="footer.privacy" data-i18n-href="footer.privacy.href">プライバシーポリシー</a>
+        <a href="contact.html" class="footer-link" data-i18n="footer.contact">お問い合わせ</a>
         <a href="https://x.com/nullpo_works" class="footer-link" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
       </div>
       <p class="footer-copy">&copy; 2026 NullPo Works / Veriquest</p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

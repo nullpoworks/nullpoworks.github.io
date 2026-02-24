@@ -112,6 +112,27 @@ a:hover {
   color: var(--text-primary);
 }
 
+/* Language toggle */
+.lang-toggle {
+  background: rgba(123, 92, 255, 0.15);
+  border: 1px solid rgba(123, 92, 255, 0.3);
+  color: var(--accent-glow);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+  background: rgba(123, 92, 255, 0.3);
+  border-color: var(--accent);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -801,6 +822,11 @@ a:hover {
 @media (max-width: 767px) {
   .hamburger {
     display: flex;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
+    margin-right: 8px;
   }
 
   .nav {

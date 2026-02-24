@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>テスターページ - NullPo Works</title>
-  <meta name="description" content="NullPo Worksのクローズドテストにご参加いただくためのテスター登録ページです。">
-  <meta property="og:title" content="テスターページ - NullPo Works">
-  <meta property="og:description" content="NullPo Worksのクローズドテストにご参加いただくためのテスター登録ページです。">
+  <title data-i18n="meta.title.beta">テスターページ - NullPo Works</title>
+  <meta name="description" data-i18n-meta="meta.desc.beta" content="NullPo Worksのクローズドテストにご参加いただくためのテスター登録ページです。">
+  <meta property="og:title" data-i18n-meta="meta.og.title.beta" content="テスターページ - NullPo Works">
+  <meta property="og:description" data-i18n-meta="meta.og.desc.beta" content="NullPo Worksのクローズドテストにご参加いただくためのテスター登録ページです。">
   <meta property="og:image" content="https://nullpoworks.github.io/images/og-image.png">
   <meta property="og:url" content="https://nullpoworks.github.io/beta-test.html">
   <meta property="og:type" content="website">
@@ -37,7 +37,8 @@
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="メニュー" data-i18n-aria="hamburger.aria" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -51,43 +52,43 @@
       <!-- ========== Hero ========== -->
       <div class="beta-hero">
         <img src="images/logo-white.png" alt="NullPo Works" class="beta-hero-logo" width="200" height="60">
-        <h1 class="beta-hero-title">NullPo Works<br>テスターページ</h1>
-        <p class="beta-hero-sub">NullPo Worksのクローズドテストにご参加いただきありがとうございます。<br>このページからテスター登録、各アプリのインストール、バグ報告ができます。</p>
+        <h1 class="beta-hero-title" data-i18n-html="beta.hero.title">NullPo Works<br>テスターページ</h1>
+        <p class="beta-hero-sub" data-i18n-html="beta.hero.sub">NullPo Worksのクローズドテストにご参加いただきありがとうございます。<br>このページからテスター登録、各アプリのインストール、バグ報告ができます。</p>
       </div>
 
       <!-- ========== ページ内ナビ ========== -->
       <nav class="beta-nav">
-        <a href="#register" class="beta-nav-link">テスター登録</a>
-        <a href="#tamashii" class="beta-nav-link">魂の共鳴</a>
-        <a href="#14banchi" class="beta-nav-link">14番地</a>
-        <a href="#chat" class="beta-nav-link">バグ報告</a>
+        <a href="#register" class="beta-nav-link" data-i18n="beta.nav.register">テスター登録</a>
+        <a href="#tamashii" class="beta-nav-link" data-i18n="beta.nav.tamashii">魂の共鳴</a>
+        <a href="#14banchi" class="beta-nav-link" data-i18n="beta.nav.14banchi">14番地</a>
+        <a href="#chat" class="beta-nav-link" data-i18n="beta.nav.chat">バグ報告</a>
       </nav>
 
       <!-- ========== テスター登録 ========== -->
       <section class="beta-section" id="register">
-        <h2 class="beta-section-title">テスター登録</h2>
-        <p class="beta-section-desc">NullPo Worksのテスターとして登録すると、開発中のアプリをいち早く体験できます。<br>Google Playで使用しているGoogleアカウント（Gmailアドレス）を登録してください。<br>登録後、管理者がGoogle Playにアカウントを追加します。テストが稼働中のアプリは、通常24時間以内にダウンロード可能になります。<br>「準備中」と表示されているアプリは、テスト開始までしばらくお待ちください。</p>
+        <h2 class="beta-section-title" data-i18n="beta.reg.title">テスター登録</h2>
+        <p class="beta-section-desc" data-i18n-html="beta.reg.desc">NullPo Worksのテスターとして登録すると、開発中のアプリをいち早く体験できます。<br>Google Playで使用しているGoogleアカウント（Gmailアドレス）を登録してください。<br>登録後、管理者がGoogle Playにアカウントを追加します。テストが稼働中のアプリは、通常24時間以内にダウンロード可能になります。<br>「準備中」と表示されているアプリは、テスト開始までしばらくお待ちください。</p>
 
         <form id="register-form" class="beta-form" novalidate>
           <div class="form-group">
-            <label for="register-name" class="form-label">名前 <span class="form-optional">（任意・ニックネーム可）</span></label>
-            <input type="text" id="register-name" name="name" class="form-input" placeholder="例: テスト太郎" maxlength="50">
+            <label for="register-name" class="form-label"><span data-i18n="beta.reg.label.name">名前</span> <span class="form-optional" data-i18n="beta.reg.label.name.opt">（任意・ニックネーム可）</span></label>
+            <input type="text" id="register-name" name="name" class="form-input" placeholder="例: テスト太郎" data-i18n-placeholder="beta.reg.ph.name" maxlength="50">
           </div>
           <div class="form-group">
-            <label for="register-email" class="form-label">Googleアカウント（Gmailアドレス） <span class="form-required">*</span></label>
+            <label for="register-email" class="form-label"><span data-i18n="beta.reg.label.email">Googleアカウント（Gmailアドレス）</span> <span class="form-required">*</span></label>
             <input type="email" id="register-email" name="email" class="form-input" placeholder="example@gmail.com" required maxlength="254">
           </div>
           <div class="beta-privacy-note">
-            <p>「登録する」を押すことで、下記の<a href="#privacy">個人情報の取り扱いについて</a>に同意したものとみなします。</p>
+            <p data-i18n-html="beta.reg.privacy.note">「登録する」を押すことで、下記の<a href="#privacy">個人情報の取り扱いについて</a>に同意したものとみなします。</p>
           </div>
-          <button type="submit" id="register-submit" class="btn btn-primary beta-form-submit">登録する</button>
+          <button type="submit" id="register-submit" class="btn btn-primary beta-form-submit" data-i18n="beta.reg.submit">登録する</button>
           <div id="register-status" class="contact-status" role="alert" aria-live="polite" hidden></div>
         </form>
 
         <div class="beta-list-section">
-          <h3 class="beta-list-title">登録済みテスター</h3>
+          <h3 class="beta-list-title" data-i18n="beta.reg.list.title">登録済みテスター</h3>
           <div id="register-list" class="beta-list">
-            <p class="beta-list-loading">読み込み中...</p>
+            <p class="beta-list-loading" data-i18n="beta.reg.list.loading">読み込み中...</p>
           </div>
         </div>
       </section>
@@ -95,13 +96,13 @@
       <!-- ========== 注意事項（共通） ========== -->
       <section class="beta-section beta-alert">
         <div class="beta-alert-icon">&#x26A0;&#xFE0F;</div>
-        <h2 class="beta-section-title">はじめにご確認ください</h2>
+        <h2 class="beta-section-title" data-i18n="beta.alert.title">はじめにご確認ください</h2>
         <div class="beta-alert-body">
-          <p class="beta-alert-main">テスターとして<strong>登録したGoogleアカウント</strong>でスマートフォンにログインしていますか？</p>
-          <p class="beta-alert-desc">違うGoogleアカウントでログインしていると、Google Playに「このアプリは利用できません」と表示されてインストールできません。</p>
+          <p class="beta-alert-main" data-i18n-html="beta.alert.main">テスターとして<strong>登録したGoogleアカウント</strong>でスマートフォンにログインしていますか？</p>
+          <p class="beta-alert-desc" data-i18n="beta.alert.desc">違うGoogleアカウントでログインしていると、Google Playに「このアプリは利用できません」と表示されてインストールできません。</p>
           <div class="beta-alert-check">
-            <p>&#x2705; 登録したGoogleアカウントでログインしている &#x2192; このまま進んでください</p>
-            <p>&#x1F504; わからない・違うアカウントかも &#x2192; スマートフォンの <strong>「設定」&#x2192;「アカウント」</strong> からGoogleアカウントを確認してください</p>
+            <p data-i18n-html="beta.alert.check1">&#x2705; 登録したGoogleアカウントでログインしている &#x2192; このまま進んでください</p>
+            <p data-i18n-html="beta.alert.check2">&#x1F504; わからない・違うアカウントかも &#x2192; スマートフォンの <strong>「設定」&#x2192;「アカウント」</strong> からGoogleアカウントを確認してください</p>
           </div>
         </div>
       </section>
@@ -113,38 +114,38 @@
         <div class="beta-app-header">
           <img src="images/tamashii-icon-512.png" alt="" class="beta-app-icon" width="56" height="56">
           <div>
-            <h2 class="beta-section-title beta-app-title">魂の共鳴 ～私を信じて～</h2>
-            <span class="beta-app-tag">砂パズル / Android</span>
+            <h2 class="beta-section-title beta-app-title" data-i18n="beta.tamashii.title">魂の共鳴 ～私を信じて～</h2>
+            <span class="beta-app-tag" data-i18n="beta.tamashii.tag">砂パズル / Android</span>
           </div>
         </div>
 
         <!-- CTA -->
         <div class="beta-cta">
-          <p class="beta-cta-lead">アカウントの確認ができたら、下のボタンからテストに参加しましょう。</p>
+          <p class="beta-cta-lead" data-i18n="beta.tamashii.cta.lead">アカウントの確認ができたら、下のボタンからテストに参加しましょう。</p>
           <a href="https://play.google.com/apps/testing/works.nullpo.tamashii" class="btn btn-primary beta-cta-btn" target="_blank" rel="noopener noreferrer">
             <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 13l2.303-2.492zM5.864 2.658L16.8 9.024l-2.302 2.302L5.864 2.658z"/></svg>
-            テストに参加してインストールする
+            <span data-i18n="beta.tamashii.cta.btn">テストに参加してインストールする</span>
           </a>
-          <p class="beta-cta-note">ボタンを押すと Google Play のテスト参加ページが開きます</p>
+          <p class="beta-cta-note" data-i18n="beta.tamashii.cta.note">ボタンを押すと Google Play のテスト参加ページが開きます</p>
         </div>
 
         <!-- 3ステップガイド -->
-        <h3 class="beta-sub-heading">インストール手順（3ステップ）</h3>
-        <p class="beta-steps-intro">上のボタンを押した後の流れを、実際の画面で説明します。</p>
+        <h3 class="beta-sub-heading" data-i18n="beta.tamashii.steps.heading">インストール手順（3ステップ）</h3>
+        <p class="beta-steps-intro" data-i18n="beta.tamashii.steps.intro">上のボタンを押した後の流れを、実際の画面で説明します。</p>
 
         <div class="beta-steps">
           <!-- Step 1 -->
           <div class="beta-step">
             <div class="beta-step-number">1</div>
             <div class="beta-step-content">
-              <h4 class="beta-step-title">「テスターになる」を押す</h4>
-              <p>ボタンを押すと、下のような画面が開きます。<br>画面の一番下にある<strong>「テスターになる」</strong>ボタンを押してください。これがテストへの参加表明になります。</p>
-              <p class="beta-step-note">※ 最初は英語で <strong>"Become a tester"</strong> と表示される場合があります。下の画像は日本語に翻訳した状態です。ページを日本語に翻訳してから操作すると分かりやすいのでおすすめです。</p>
+              <h4 class="beta-step-title" data-i18n="beta.tamashii.step1.title">「テスターになる」を押す</h4>
+              <p data-i18n-html="beta.tamashii.step1.p1">ボタンを押すと、下のような画面が開きます。<br>画面の一番下にある<strong>「テスターになる」</strong>ボタンを押してください。これがテストへの参加表明になります。</p>
+              <p class="beta-step-note" data-i18n-html="beta.tamashii.step1.note1">※ 最初は英語で <strong>"Become a tester"</strong> と表示される場合があります。下の画像は日本語に翻訳した状態です。ページを日本語に翻訳してから操作すると分かりやすいのでおすすめです。</p>
               <div class="beta-step-image">
                 <img src="images/tester01.jpg" alt="ステップ1: テスターになるボタンを押す画面" loading="lazy">
                 <div class="beta-step-image-indicator" style="top: 79%; left: 8%; width: 43%; height: 7%;"></div>
               </div>
-              <p class="beta-step-note">※ この画面が表示されない場合は、登録したGoogleアカウントでログインしているか確認してください。</p>
+              <p class="beta-step-note" data-i18n="beta.tamashii.step1.note2">※ この画面が表示されない場合は、登録したGoogleアカウントでログインしているか確認してください。</p>
             </div>
           </div>
 
@@ -152,13 +153,13 @@
           <div class="beta-step">
             <div class="beta-step-number">2</div>
             <div class="beta-step-content">
-              <h4 class="beta-step-title">「Google Play でダウンロード」を押す</h4>
-              <p>「あなたはテスターです。」（英語では <strong>"You're a tester"</strong>）と表示されたら参加完了です！<br>画面の中にある青い文字の<strong>「Google Play でダウンロードしてください」</strong>（英語では <strong>"download it on Google Play"</strong>）というリンクを押してください。</p>
+              <h4 class="beta-step-title" data-i18n="beta.tamashii.step2.title">「Google Play でダウンロード」を押す</h4>
+              <p data-i18n-html="beta.tamashii.step2.p1">「あなたはテスターです。」（英語では <strong>"You're a tester"</strong>）と表示されたら参加完了です！<br>画面の中にある青い文字の<strong>「Google Play でダウンロードしてください」</strong>（英語では <strong>"download it on Google Play"</strong>）というリンクを押してください。</p>
               <div class="beta-step-image">
                 <img src="images/tester02.jpg" alt="ステップ2: Google Playでダウンロードリンクを押す画面" loading="lazy">
                 <div class="beta-step-image-indicator" style="top: 68.5%; left: 8%; width: 82%; height: 6%;"></div>
               </div>
-              <p class="beta-step-note">※ リンクが有効になるまで数分かかる場合があります。表示されない場合は少し待ってからページを更新してください。</p>
+              <p class="beta-step-note" data-i18n="beta.tamashii.step2.note1">※ リンクが有効になるまで数分かかる場合があります。表示されない場合は少し待ってからページを更新してください。</p>
             </div>
           </div>
 
@@ -166,8 +167,8 @@
           <div class="beta-step">
             <div class="beta-step-number">3</div>
             <div class="beta-step-content">
-              <h4 class="beta-step-title">「インストール」を押す</h4>
-              <p>Google Playのアプリページが開きます。<br>青色の<strong>「インストール」</strong>ボタンを押せば、ダウンロードが始まります。これで完了です！</p>
+              <h4 class="beta-step-title" data-i18n="beta.tamashii.step3.title">「インストール」を押す</h4>
+              <p data-i18n-html="beta.tamashii.step3.p1">Google Playのアプリページが開きます。<br>青色の<strong>「インストール」</strong>ボタンを押せば、ダウンロードが始まります。これで完了です！</p>
               <div class="beta-step-image">
                 <img src="images/tester03.jpg" alt="ステップ3: インストールボタンを押す画面" loading="lazy">
                 <div class="beta-step-image-indicator" style="top: 46.5%; left: 2.5%; width: 94%; height: 7%;"></div>
@@ -177,8 +178,8 @@
         </div>
 
         <div class="beta-alert-body" style="margin-top: 1.5rem;">
-          <p class="beta-alert-main">&#x1F4F2; <strong>インストール後、必ず一度アプリを起動してください。</strong></p>
-          <p class="beta-alert-desc">ダウンロードしただけではテストへの参加が完了しません。アプリを一度起動することで、正式にテスト参加者として登録されます。</p>
+          <p class="beta-alert-main" data-i18n-html="beta.tamashii.launch.main">&#x1F4F2; <strong>インストール後、必ず一度アプリを起動してください。</strong></p>
+          <p class="beta-alert-desc" data-i18n="beta.tamashii.launch.desc">ダウンロードしただけではテストへの参加が完了しません。アプリを一度起動することで、正式にテスト参加者として登録されます。</p>
         </div>
       </section>
 
@@ -189,100 +190,100 @@
         <div class="beta-app-header">
           <img src="images/14banchi-icon-512.png" alt="" class="beta-app-icon" width="56" height="56">
           <div>
-            <h2 class="beta-section-title beta-app-title">14番地</h2>
-            <span class="beta-app-tag">ホラー / Android</span>
+            <h2 class="beta-section-title beta-app-title" data-i18n="beta.14banchi.title">14番地</h2>
+            <span class="beta-app-tag" data-i18n="beta.14banchi.tag">ホラー / Android</span>
           </div>
         </div>
 
         <div class="beta-placeholder">
-          <p>&#x1F527; 現在準備中です。テスト開始までしばらくお待ちください。<br>テストが稼働しましたら、こちらにインストール手順を掲載します。</p>
+          <p data-i18n-html="beta.14banchi.placeholder">&#x1F527; 現在準備中です。テスト開始までしばらくお待ちください。<br>テストが稼働しましたら、こちらにインストール手順を掲載します。</p>
         </div>
       </section>
 
       <!-- ========== バグ報告チャット ========== -->
       <section class="beta-section" id="chat">
-        <h2 class="beta-section-title">バグ報告・フィードバック</h2>
-        <p class="beta-section-desc">バグの報告、ご意見、ご感想など何でもお気軽に投稿してください。<br>全アプリ共通の掲示板です。どのアプリについてかを書き添えていただけると助かります。<br>他のテスターの投稿も確認できます。</p>
+        <h2 class="beta-section-title" data-i18n="beta.chat.title">バグ報告・フィードバック</h2>
+        <p class="beta-section-desc" data-i18n-html="beta.chat.desc">バグの報告、ご意見、ご感想など何でもお気軽に投稿してください。<br>全アプリ共通の掲示板です。どのアプリについてかを書き添えていただけると助かります。<br>他のテスターの投稿も確認できます。</p>
 
         <form id="chat-form" class="beta-form" novalidate>
           <div class="form-group">
-            <label for="chat-name" class="form-label">名前 <span class="form-optional">（任意・ニックネーム可）</span></label>
-            <input type="text" id="chat-name" name="name" class="form-input" placeholder="例: テスト太郎" maxlength="50">
+            <label for="chat-name" class="form-label"><span data-i18n="beta.chat.label.name">名前</span> <span class="form-optional" data-i18n="beta.chat.label.name.opt">（任意・ニックネーム可）</span></label>
+            <input type="text" id="chat-name" name="name" class="form-input" placeholder="例: テスト太郎" data-i18n-placeholder="beta.chat.ph.name" maxlength="50">
           </div>
           <div class="form-group">
-            <label for="chat-message" class="form-label">メッセージ <span class="form-required">*</span></label>
-            <textarea id="chat-message" name="message" class="form-input form-textarea" placeholder="例: 【魂の共鳴】フィーバー中にブロックが消えない&#10;&#10;バグの詳細、再現手順、ご意見など" required maxlength="2000" rows="4"></textarea>
+            <label for="chat-message" class="form-label"><span data-i18n="beta.chat.label.message">メッセージ</span> <span class="form-required">*</span></label>
+            <textarea id="chat-message" name="message" class="form-input form-textarea" placeholder="例: 【魂の共鳴】フィーバー中にブロックが消えない&#10;&#10;バグの詳細、再現手順、ご意見など" data-i18n-placeholder="beta.chat.ph.message" required maxlength="2000" rows="4"></textarea>
           </div>
-          <button type="submit" id="chat-submit" class="btn btn-primary beta-form-submit">投稿する</button>
+          <button type="submit" id="chat-submit" class="btn btn-primary beta-form-submit" data-i18n="beta.chat.submit">投稿する</button>
           <div id="chat-status" class="contact-status" role="alert" aria-live="polite" hidden></div>
         </form>
 
         <div class="beta-list-section">
-          <h3 class="beta-list-title">投稿一覧</h3>
+          <h3 class="beta-list-title" data-i18n="beta.chat.list.title">投稿一覧</h3>
           <div id="chat-list" class="beta-chat-list">
-            <p class="beta-list-loading">読み込み中...</p>
+            <p class="beta-list-loading" data-i18n="beta.chat.list.loading">読み込み中...</p>
           </div>
         </div>
       </section>
 
       <!-- ========== 注意書き ========== -->
       <section class="beta-section beta-notice">
-        <p>&#x26A0;&#xFE0F; このテストは登録制です。テストの内容やスクリーンショットの公開はお控えください。</p>
-        <p>&#x1F4F1; 対応端末：Android のみ（iOS版は準備中です）</p>
-        <p>&#x1F504; テスト版は不定期にアップデートされます。Google Playの自動更新が有効であれば自動的に最新版に更新されますが、最新バージョンの確認やインストールは各アプリのダウンロードリンク（Google Playページ）から行ってください。</p>
-        <p>&#x1F4AC; 何かお困りのことがあれば、お気軽にご連絡ください。</p>
+        <p data-i18n="beta.notice.1">&#x26A0;&#xFE0F; このテストは登録制です。テストの内容やスクリーンショットの公開はお控えください。</p>
+        <p data-i18n="beta.notice.2">&#x1F4F1; 対応端末：Android のみ（iOS版は準備中です）</p>
+        <p data-i18n="beta.notice.3">&#x1F504; テスト版は不定期にアップデートされます。Google Playの自動更新が有効であれば自動的に最新版に更新されますが、最新バージョンの確認やインストールは各アプリのダウンロードリンク（Google Playページ）から行ってください。</p>
+        <p data-i18n="beta.notice.4">&#x1F4AC; 何かお困りのことがあれば、お気軽にご連絡ください。</p>
       </section>
 
       <!-- ========== 個人情報の取り扱い ========== -->
       <section class="beta-section beta-privacy" id="privacy">
-        <h2 class="beta-section-title">個人情報の取り扱いについて</h2>
+        <h2 class="beta-section-title" data-i18n="beta.privacy.title">個人情報の取り扱いについて</h2>
         <div class="beta-privacy-detail">
-          <p>NullPo Works（以下「当方」）は、個人情報の保護に関する法律（個人情報保護法）に基づき、本ページで取得する個人情報を以下のとおり取り扱います。</p>
+          <p data-i18n="beta.privacy.intro">NullPo Works（以下「当方」）は、個人情報の保護に関する法律（個人情報保護法）に基づき、本ページで取得する個人情報を以下のとおり取り扱います。</p>
 
-          <h3>1. 個人情報の管理者</h3>
-          <p>NullPo Works（Veriquest IT事業部）<br>連絡先：<a href="contact.html">お問い合わせページ</a></p>
+          <h3 data-i18n="beta.privacy.h1">1. 個人情報の管理者</h3>
+          <p data-i18n-html="beta.privacy.p1">NullPo Works（Veriquest IT事業部）<br>連絡先：<a href="contact.html">お問い合わせページ</a></p>
 
-          <h3>2. 取得する個人情報</h3>
-          <ul>
+          <h3 data-i18n="beta.privacy.h2">2. 取得する個人情報</h3>
+          <div data-i18n-html="beta.privacy.p2"><ul>
             <li>Googleアカウント（Gmailアドレス）</li>
             <li>名前またはニックネーム（任意）</li>
             <li>バグ報告・フィードバックの投稿内容</li>
-          </ul>
+          </ul></div>
 
-          <h3>3. 利用目的</h3>
-          <p>取得した個人情報は、以下の目的にのみ使用いたします。</p>
-          <ul>
+          <h3 data-i18n="beta.privacy.h3">3. 利用目的</h3>
+          <p data-i18n="beta.privacy.p3a">取得した個人情報は、以下の目的にのみ使用いたします。</p>
+          <div data-i18n-html="beta.privacy.p3b"><ul>
             <li>Google Playクローズドテストへの参加者登録・管理</li>
             <li>テスト用アプリの配信設定（Google Play Consoleへのテスターアカウント追加）</li>
             <li>テストに関するご連絡・ご案内</li>
             <li>バグ報告・フィードバックの管理および改善対応</li>
-          </ul>
-          <p>上記以外の目的で利用することはありません。</p>
+          </ul></div>
+          <p data-i18n="beta.privacy.p3c">上記以外の目的で利用することはありません。</p>
 
-          <h3>4. 第三者への提供</h3>
-          <p>取得した個人情報は、以下の場合を除き第三者に提供いたしません。</p>
-          <ul>
+          <h3 data-i18n="beta.privacy.h4">4. 第三者への提供</h3>
+          <p data-i18n="beta.privacy.p4a">取得した個人情報は、以下の場合を除き第三者に提供いたしません。</p>
+          <div data-i18n-html="beta.privacy.p4b"><ul>
             <li>ご本人の同意がある場合</li>
             <li>法令に基づく場合</li>
             <li>テストの実施に必要な範囲でGoogle Play Consoleに登録する場合（Gmailアドレスのみ）</li>
-          </ul>
+          </ul></div>
 
-          <h3>5. 安全管理措置</h3>
-          <p>取得した個人情報は、Google スプレッドシートにて暗号化通信（SSL/TLS）を用いて安全に管理し、不正アクセス・漏洩・紛失の防止に努めます。アクセス権限は当方の管理者のみに限定しています。</p>
+          <h3 data-i18n="beta.privacy.h5">5. 安全管理措置</h3>
+          <p data-i18n="beta.privacy.p5">取得した個人情報は、Google スプレッドシートにて暗号化通信（SSL/TLS）を用いて安全に管理し、不正アクセス・漏洩・紛失の防止に努めます。アクセス権限は当方の管理者のみに限定しています。</p>
 
-          <h3>6. 保有期間と削除</h3>
-          <p>個人情報は、クローズドテスト終了後、合理的な期間内に削除いたします。テスト期間中であっても、ご本人からの削除依頼があった場合は速やかに対応いたします。</p>
+          <h3 data-i18n="beta.privacy.h6">6. 保有期間と削除</h3>
+          <p data-i18n="beta.privacy.p6">個人情報は、クローズドテスト終了後、合理的な期間内に削除いたします。テスト期間中であっても、ご本人からの削除依頼があった場合は速やかに対応いたします。</p>
 
-          <h3>7. 開示・訂正・削除の請求</h3>
-          <p>ご本人は、個人情報保護法に基づき、ご自身の個人情報について開示・訂正・削除を請求する権利を有します。ご希望の方は<a href="contact.html">お問い合わせページ</a>よりご連絡ください。</p>
+          <h3 data-i18n="beta.privacy.h7">7. 開示・訂正・削除の請求</h3>
+          <p data-i18n-html="beta.privacy.p7">ご本人は、個人情報保護法に基づき、ご自身の個人情報について開示・訂正・削除を請求する権利を有します。ご希望の方は<a href="contact.html">お問い合わせページ</a>よりご連絡ください。</p>
 
-          <h3>8. 任意性</h3>
-          <p>個人情報の提供は任意ですが、Gmailアドレスをご提供いただけない場合、テストへの参加ができない場合があります。</p>
+          <h3 data-i18n="beta.privacy.h8">8. 任意性</h3>
+          <p data-i18n="beta.privacy.p8">個人情報の提供は任意ですが、Gmailアドレスをご提供いただけない場合、テストへの参加ができない場合があります。</p>
 
-          <h3>9. バグ報告チャットについて</h3>
-          <p>バグ報告・フィードバック欄に入力された名前と投稿内容は、テスト参加者全員に表示されます。公開を望まない情報は投稿しないようご注意ください。個人を特定する情報（メールアドレス・電話番号等）の投稿はお控えください。</p>
+          <h3 data-i18n="beta.privacy.h9">9. バグ報告チャットについて</h3>
+          <p data-i18n="beta.privacy.p9">バグ報告・フィードバック欄に入力された名前と投稿内容は、テスト参加者全員に表示されます。公開を望まない情報は投稿しないようご注意ください。個人を特定する情報（メールアドレス・電話番号等）の投稿はお控えください。</p>
 
-          <p class="beta-privacy-update">最終更新日：2026年2月23日</p>
+          <p class="beta-privacy-update" data-i18n="beta.privacy.update">最終更新日：2026年2月23日</p>
         </div>
       </section>
 
@@ -293,14 +294,15 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
-        <a href="privacy-policy.html" class="footer-link">プライバシーポリシー</a>
-        <a href="contact.html" class="footer-link">お問い合わせ</a>
+        <a href="privacy-policy.html" class="footer-link" data-i18n="footer.privacy" data-i18n-href="footer.privacy.href">プライバシーポリシー</a>
+        <a href="contact.html" class="footer-link" data-i18n="footer.contact">お問い合わせ</a>
         <a href="https://x.com/nullpo_works" class="footer-link" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
       </div>
       <p class="footer-copy">&copy; 2026 NullPo Works / Veriquest</p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script src="js/tester.js"></script>
 </body>

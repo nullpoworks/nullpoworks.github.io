@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NullPo Works - ゲーム&アプリ開発</title>
-  <meta name="description" content="NullPo Worksは、ゲームや学習アプリなどを開発するデベロッパーです。パズル・アクション・ホラーから教育系まで多彩な作品を展開中。">
-  <meta property="og:title" content="NullPo Works">
-  <meta property="og:description" content="ゲームや学習アプリなどを開発するデベロッパー">
+  <title data-i18n="meta.title.index">NullPo Works - ゲーム&アプリ開発</title>
+  <meta name="description" data-i18n-meta="meta.desc.index" content="NullPo Worksは、ゲームや学習アプリなどを開発するデベロッパーです。パズル・アクション・ホラーから教育系まで多彩な作品を展開中。">
+  <meta property="og:title" data-i18n-meta="meta.og.title.index" content="NullPo Works">
+  <meta property="og:description" data-i18n-meta="meta.og.desc.index" content="ゲームや学習アプリなどを開発するデベロッパー">
   <meta property="og:image" content="https://nullpoworks.github.io/images/og-image.png">
   <meta property="og:url" content="https://nullpoworks.github.io/">
   <meta property="og:type" content="website">
@@ -59,7 +59,8 @@
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="メニュー" data-i18n-aria="hamburger.aria" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -74,9 +75,9 @@
     </div>
     <div class="hero-content">
       <img src="images/logo-white.png" alt="NullPo Works" class="hero-logo" width="320" height="96">
-      <p class="hero-tagline">ひらめきを、カタチに。</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">ひらめきを、カタチに。</p>
     </div>
-    <a href="#games" class="hero-scroll" aria-label="下にスクロール">
+    <a href="#games" class="hero-scroll" data-i18n-aria="hero.scroll.aria" aria-label="下にスクロール">
       <span class="hero-scroll-arrow"></span>
     </a>
   </section>
@@ -97,16 +98,16 @@
               <div class="game-card-header">
                 <img src="images/tamashii-icon-512.png" alt="" class="game-icon" width="56" height="56" loading="lazy">
                 <div>
-                  <h3 class="game-title">魂の共鳴 ～私を信じて～</h3>
+                  <h3 class="game-title" data-i18n="game.tamashii.title">魂の共鳴 ～私を信じて～</h3>
                   <div class="game-tags">
-                    <span class="game-tag">砂パズル</span>
+                    <span class="game-tag" data-i18n="game.tamashii.tag1">砂パズル</span>
                     <span class="game-tag">Android / iOS / Web</span>
                   </div>
                 </div>
               </div>
-              <p class="game-desc">ブロックが砂粒に変化し、同色の砂を左右に繋げて浄化していくパズルゲーム。ヨガの修行僧が邪気を祓う独自の世界観。</p>
+              <p class="game-desc" data-i18n="game.tamashii.desc">ブロックが砂粒に変化し、同色の砂を左右に繋げて浄化していくパズルゲーム。ヨガの修行僧が邪気を祓う独自の世界観。</p>
               <div class="game-links">
-                <a href="https://rhynakesora.github.io/tamashii/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Web版で遊ぶ</a>
+                <a href="https://rhynakesora.github.io/tamashii/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="game.tamashii.play">Web版で遊ぶ</a>
                 <span class="btn btn-store btn-disabled" aria-disabled="true">
                   <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 13l2.303-2.492zM5.864 2.658L16.8 9.024l-2.302 2.302L5.864 2.658z"/></svg>
                   Google Play - Coming Soon
@@ -129,16 +130,16 @@
             <div class="game-card-header">
               <img src="images/piyo-adventure-icon-512.png" alt="" class="game-icon" width="56" height="56" loading="lazy">
               <div>
-                <h3 class="game-title">ぴよ氏の冒険</h3>
+                <h3 class="game-title" data-i18n="game.piyo.title">ぴよ氏の冒険</h3>
                 <div class="game-tags">
-                  <span class="game-tag">エンドレスラン</span>
+                  <span class="game-tag" data-i18n="game.piyo.tag1">エンドレスラン</span>
                   <span class="game-tag">Web / PWA</span>
                 </div>
               </div>
             </div>
-            <p class="game-desc">可愛いぴよ氏を操作して障害物を避けながら走り続ける横スクロールアクション。距離300mごとにスピードアップ、最大500%の超高速ステージへ。</p>
+            <p class="game-desc" data-i18n="game.piyo.desc">可愛いぴよ氏を操作して障害物を避けながら走り続ける横スクロールアクション。距離300mごとにスピードアップ、最大500%の超高速ステージへ。</p>
             <div class="game-links">
-              <a href="https://shinomiyapiyo.github.io/games/piyo-adventure/index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Web版で遊ぶ</a>
+              <a href="https://shinomiyapiyo.github.io/games/piyo-adventure/index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="game.piyo.play">Web版で遊ぶ</a>
             </div>
           </div>
         </article>
@@ -152,16 +153,16 @@
             <div class="game-card-header">
               <img src="images/14banchi-icon-512.png" alt="" class="game-icon" width="56" height="56" loading="lazy">
               <div>
-                <h3 class="game-title">14番地</h3>
+                <h3 class="game-title" data-i18n="game.14banchi.title">14番地</h3>
                 <div class="game-tags">
-                  <span class="game-tag">ホラー</span>
+                  <span class="game-tag" data-i18n="game.14banchi.tag1">ホラー</span>
                   <span class="game-tag">Web / PWA</span>
                 </div>
               </div>
             </div>
-            <p class="game-desc">不気味な夜道を歩き、街の「異変」を見つけて正しい判断で14番地を目指す横スクロール2Dホラーゲーム。</p>
+            <p class="game-desc" data-i18n="game.14banchi.desc">不気味な夜道を歩き、街の「異変」を見つけて正しい判断で14番地を目指す横スクロール2Dホラーゲーム。</p>
             <div class="game-links">
-              <a href="https://shinomiyapiyo.github.io/games/14banchi/index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Web版で遊ぶ</a>
+              <a href="https://shinomiyapiyo.github.io/games/14banchi/index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="game.14banchi.play">Web版で遊ぶ</a>
             </div>
           </div>
         </article>
@@ -174,9 +175,9 @@
     <div class="container">
       <div class="tester-recruit-banner">
         <div class="tester-recruit-body">
-          <h2 class="tester-recruit-title">Android版テストユーザー募集中</h2>
-          <p class="tester-recruit-desc">開発中のアプリをいち早く体験してみませんか？<br>テスターとして登録すると、リリース前のアプリをGoogle Playからインストールできます。</p>
-          <a href="beta-test.html" class="btn btn-primary tester-recruit-btn">テスターページへ</a>
+          <h2 class="tester-recruit-title" data-i18n="recruit.title">Android版テストユーザー募集中</h2>
+          <p class="tester-recruit-desc" data-i18n-html="recruit.desc">開発中のアプリをいち早く体験してみませんか？<br>テスターとして登録すると、リリース前のアプリをGoogle Playからインストールできます。</p>
+          <a href="beta-test.html" class="btn btn-primary tester-recruit-btn" data-i18n="recruit.btn">テスターページへ</a>
         </div>
       </div>
     </div>
@@ -197,14 +198,14 @@
               <div class="game-card-header">
                 <img src="images/logica-icon-512.png" alt="" class="game-icon" width="56" height="56" loading="lazy">
                 <div>
-                  <h3 class="game-title">Logica -論理学の問題集-</h3>
+                  <h3 class="game-title" data-i18n="app.logica.title">Logica -論理学の問題集-</h3>
                   <div class="game-tags">
-                    <span class="game-tag">学習</span>
-                    <span class="game-tag">日本語 / English</span>
+                    <span class="game-tag" data-i18n="app.logica.tag1">学習</span>
+                    <span class="game-tag" data-i18n="app.logica.tag2">日本語 / English</span>
                   </div>
                 </div>
               </div>
-              <p class="game-desc">論理学の基礎から応用までを体系的に学べる問題集アプリ。連言・選言・条件文などの記号化をインタラクティブに演習。</p>
+              <p class="game-desc" data-i18n="app.logica.desc">論理学の基礎から応用までを体系的に学べる問題集アプリ。連言・選言・条件文などの記号化をインタラクティブに演習。</p>
               <div class="game-links">
                 <span class="btn btn-coming-soon" aria-disabled="true">Coming Soon</span>
               </div>
@@ -220,9 +221,9 @@
     <div class="container">
       <h2 class="section-title">About</h2>
       <div class="about-content">
-        <p>NullPo Worksは、日本発のデベロッパーです。</p>
-        <p>HTML5やJavaScriptなどのWeb技術をベースに、パズル・アクション・ホラーなど多ジャンルのゲームから学習アプリまで幅広く開発しています。「ひらめきを、カタチに。」を合言葉に、ユニークで面白い体験をお届けします。</p>
-        <p class="about-help-link">最新バージョンがプレイできない場合は<a href="contact.html#faq">こちら</a></p>
+        <p data-i18n="about.p1">NullPo Worksは、日本発のデベロッパーです。</p>
+        <p data-i18n="about.p2">HTML5やJavaScriptなどのWeb技術をベースに、パズル・アクション・ホラーなど多ジャンルのゲームから学習アプリまで幅広く開発しています。「ひらめきを、カタチに。」を合言葉に、ユニークで面白い体験をお届けします。</p>
+        <p class="about-help-link" data-i18n-html="about.help">最新バージョンがプレイできない場合は<a href="contact.html#faq">こちら</a></p>
       </div>
     </div>
   </section>
@@ -232,14 +233,15 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
-        <a href="privacy-policy.html" class="footer-link">プライバシーポリシー</a>
-        <a href="contact.html" class="footer-link">お問い合わせ</a>
+        <a href="privacy-policy.html" class="footer-link" data-i18n="footer.privacy" data-i18n-href="footer.privacy.href">プライバシーポリシー</a>
+        <a href="contact.html" class="footer-link" data-i18n="footer.contact">お問い合わせ</a>
         <a href="https://x.com/nullpo_works" class="footer-link" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
       </div>
       <p class="footer-copy">&copy; 2026 NullPo Works / Veriquest</p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

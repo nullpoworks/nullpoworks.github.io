@@ -45,12 +45,12 @@
   function renderRegistrations(data) {
     if (!regList) return;
     if (!data || data.length === 0) {
-      regList.innerHTML = '<p class="beta-list-empty">まだ登録はありません。</p>';
+      regList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.no_registrations')) + '</p>';
       return;
     }
     var html = '<ul class="beta-reg-list">';
     for (var i = 0; i < data.length; i++) {
-      var name = escapeHtml(data[i].name || '匿名');
+      var name = escapeHtml(data[i].name || I18n.t('js.tester.anonymous'));
       var date = formatDate(data[i].timestamp);
       html += '<li class="beta-reg-item"><span class="beta-reg-name">' + name + '</span><span class="beta-reg-date">' + date + '</span></li>';
     }
@@ -62,12 +62,12 @@
   function renderChat(data) {
     if (!chatList) return;
     if (!data || data.length === 0) {
-      chatList.innerHTML = '<p class="beta-list-empty">まだ投稿はありません。</p>';
+      chatList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.no_posts')) + '</p>';
       return;
     }
     var html = '';
     for (var i = 0; i < data.length; i++) {
-      var name = escapeHtml(data[i].name || '匿名');
+      var name = escapeHtml(data[i].name || I18n.t('js.tester.anonymous'));
       var message = escapeHtml(data[i].message || '');
       var date = formatDate(data[i].timestamp);
       html += '<div class="beta-chat-msg">';
@@ -88,8 +88,8 @@
   // ===== データ取得 =====
   function loadData() {
     if (!GAS_URL || GAS_URL.indexOf('YOUR_') === 0) {
-      if (regList) regList.innerHTML = '<p class="beta-list-empty">GAS URLが未設定です。</p>';
-      if (chatList) chatList.innerHTML = '<p class="beta-list-empty">GAS URLが未設定です。</p>';
+      if (regList) regList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.gas_not_set')) + '</p>';
+      if (chatList) chatList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.gas_not_set')) + '</p>';
       return;
     }
 
@@ -98,7 +98,7 @@
       .then(function (res) { return res.json(); })
       .then(function (data) { renderRegistrations(data); })
       .catch(function () {
-        if (regList) regList.innerHTML = '<p class="beta-list-empty">データの取得に失敗しました。</p>';
+        if (regList) regList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.loading_error')) + '</p>';
       });
 
     // チャット一覧
@@ -106,7 +106,7 @@
       .then(function (res) { return res.json(); })
       .then(function (data) { renderChat(data); })
       .catch(function () {
-        if (chatList) chatList.innerHTML = '<p class="beta-list-empty">データの取得に失敗しました。</p>';
+        if (chatList) chatList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.loading_error')) + '</p>';
       });
   }
 
@@ -119,26 +119,26 @@
       var name = regForm.querySelector('[name="name"]').value.trim();
 
       if (!email) {
-        showStatus(regStatus, 'Gmailアドレスを入力してください。', 'error');
+        showStatus(regStatus, I18n.t('js.tester.email_required'), 'error');
         return;
       }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showStatus(regStatus, 'メールアドレスの形式が正しくありません。', 'error');
+        showStatus(regStatus, I18n.t('js.tester.email_invalid'), 'error');
         return;
       }
 
-      var confirmMsg = '以下の内容で登録します。よろしいですか？\n\n'
-        + '名前: ' + (name || '匿名') + '\n'
-        + 'Googleアカウント: ' + email;
+      var confirmMsg = I18n.t('js.tester.reg_confirm') + '\n\n'
+        + I18n.t('js.tester.reg_confirm_name') + ': ' + (name || I18n.t('js.tester.anonymous')) + '\n'
+        + I18n.t('js.tester.reg_confirm_account') + ': ' + email;
       if (!confirm(confirmMsg)) return;
 
       regSubmit.disabled = true;
-      regSubmit.textContent = '送信中...';
+      regSubmit.textContent = I18n.t('js.tester.reg_submitting');
       showStatus(regStatus, '', '');
 
       var payload = {
         type: 'register',
-        name: name || '匿名',
+        name: name || I18n.t('js.tester.anonymous'),
         email: email,
         timestamp: new Date().toISOString()
       };
@@ -150,16 +150,16 @@
         body: JSON.stringify(payload)
       })
         .then(function () {
-          showStatus(regStatus, '登録しました！ありがとうございます。', 'success');
+          showStatus(regStatus, I18n.t('js.tester.reg_success'), 'success');
           regForm.reset();
           setTimeout(loadData, 2000);
         })
         .catch(function () {
-          showStatus(regStatus, '送信に失敗しました。再度お試しください。', 'error');
+          showStatus(regStatus, I18n.t('js.tester.reg_error'), 'error');
         })
         .finally(function () {
           regSubmit.disabled = false;
-          regSubmit.textContent = '登録する';
+          regSubmit.textContent = I18n.t('js.tester.reg_submit');
         });
     });
   }
@@ -173,26 +173,26 @@
       var message = chatForm.querySelector('[name="message"]').value.trim();
 
       if (!message) {
-        showStatus(chatStatus, 'メッセージを入力してください。', 'error');
+        showStatus(chatStatus, I18n.t('js.tester.msg_required'), 'error');
         return;
       }
       if (message.length > 2000) {
-        showStatus(chatStatus, 'メッセージは2000文字以内で入力してください。', 'error');
+        showStatus(chatStatus, I18n.t('js.tester.msg_too_long'), 'error');
         return;
       }
 
-      var confirmMsg = 'この内容で投稿します。よろしいですか？\n\n'
-        + '名前: ' + (name || '匿名') + '\n'
-        + 'メッセージ: ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
+      var confirmMsg = I18n.t('js.tester.chat_confirm') + '\n\n'
+        + I18n.t('js.tester.chat_confirm_name') + ': ' + (name || I18n.t('js.tester.anonymous')) + '\n'
+        + I18n.t('js.tester.chat_confirm_message') + ': ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
       if (!confirm(confirmMsg)) return;
 
       chatSubmit.disabled = true;
-      chatSubmit.textContent = '送信中...';
+      chatSubmit.textContent = I18n.t('js.tester.chat_submitting');
       showStatus(chatStatus, '', '');
 
       var payload = {
         type: 'chat',
-        name: name || '匿名',
+        name: name || I18n.t('js.tester.anonymous'),
         message: message,
         timestamp: new Date().toISOString()
       };
@@ -204,16 +204,16 @@
         body: JSON.stringify(payload)
       })
         .then(function () {
-          showStatus(chatStatus, '投稿しました！', 'success');
+          showStatus(chatStatus, I18n.t('js.tester.chat_success'), 'success');
           chatForm.reset();
           setTimeout(loadData, 2000);
         })
         .catch(function () {
-          showStatus(chatStatus, '送信に失敗しました。再度お試しください。', 'error');
+          showStatus(chatStatus, I18n.t('js.tester.chat_error'), 'error');
         })
         .finally(function () {
           chatSubmit.disabled = false;
-          chatSubmit.textContent = '投稿する';
+          chatSubmit.textContent = I18n.t('js.tester.chat_submit');
         });
     });
   }

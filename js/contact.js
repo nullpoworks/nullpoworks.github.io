@@ -36,39 +36,39 @@
     var message = form.querySelector('[name="message"]').value.trim();
 
     if (!category) {
-      showStatus('お問い合わせ種別を選択してください。', 'error');
+      showStatus(I18n.t('js.contact.category_required'), 'error');
       return;
     }
     if (!message) {
-      showStatus('お問い合わせ内容を入力してください。', 'error');
+      showStatus(I18n.t('js.contact.message_required'), 'error');
       return;
     }
     if (message.length > 2000) {
-      showStatus('お問い合わせ内容は2000文字以内で入力してください。', 'error');
+      showStatus(I18n.t('js.contact.message_too_long'), 'error');
       return;
     }
     if (email && !isValidEmail(email)) {
-      showStatus('メールアドレスの形式が正しくありません。', 'error');
+      showStatus(I18n.t('js.contact.email_invalid'), 'error');
       return;
     }
 
     // Rate limiting (1 submission per 30 seconds)
     var lastSubmit = sessionStorage.getItem('lastContactSubmit');
     if (lastSubmit && Date.now() - Number(lastSubmit) < 30000) {
-      showStatus('しばらく待ってから再度送信してください。', 'error');
+      showStatus(I18n.t('js.contact.rate_limit'), 'error');
       return;
     }
 
-    var confirmMsg = 'この内容で送信します。よろしいですか？\n\n'
-      + '種別: ' + category + '\n'
-      + '名前: ' + (name || '未記入') + '\n'
-      + 'メール: ' + (email || '未記入') + '\n'
-      + '内容: ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
+    var confirmMsg = I18n.t('js.contact.confirm') + '\n\n'
+      + I18n.t('js.contact.confirm_category') + ': ' + category + '\n'
+      + I18n.t('js.contact.confirm_name') + ': ' + (name || I18n.t('js.contact.not_entered')) + '\n'
+      + I18n.t('js.contact.confirm_email') + ': ' + (email || I18n.t('js.contact.not_entered')) + '\n'
+      + I18n.t('js.contact.confirm_message') + ': ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
     if (!confirm(confirmMsg)) return;
 
     // Disable button
     submitBtn.disabled = true;
-    submitBtn.textContent = '送信中...';
+    submitBtn.textContent = I18n.t('js.contact.submitting');
     showStatus('', '');
 
     var payload = {
@@ -88,16 +88,16 @@
       .then(function () {
         // no-cors always returns opaque response, so we assume success
         sessionStorage.setItem('lastContactSubmit', String(Date.now()));
-        showStatus('お問い合わせを送信しました。ありがとうございます。', 'success');
+        showStatus(I18n.t('js.contact.success'), 'success');
         form.reset();
         if (charCountEl) charCountEl.textContent = '0';
       })
       .catch(function () {
-        showStatus('送信に失敗しました。時間を置いて再度お試しいただくか、X (Twitter) のDMよりご連絡ください。', 'error');
+        showStatus(I18n.t('js.contact.error'), 'error');
       })
       .finally(function () {
         submitBtn.disabled = false;
-        submitBtn.textContent = '送信する';
+        submitBtn.textContent = I18n.t('js.contact.submit');
       });
   });
 

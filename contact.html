@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ - NullPo Works</title>
-  <meta name="description" content="NullPo Worksへのお問い合わせ・ご依頼はこちら。">
-  <meta property="og:title" content="お問い合わせ - NullPo Works">
-  <meta property="og:description" content="NullPo Worksへのお問い合わせ・ご依頼はこちら。">
+  <title data-i18n="meta.title.contact">お問い合わせ - NullPo Works</title>
+  <meta name="description" data-i18n-meta="meta.desc.contact" content="NullPo Worksへのお問い合わせ・ご依頼はこちら。">
+  <meta property="og:title" data-i18n-meta="meta.og.title.contact" content="お問い合わせ - NullPo Works">
+  <meta property="og:description" data-i18n-meta="meta.og.desc.contact" content="NullPo Worksへのお問い合わせ・ご依頼はこちら。">
   <meta property="og:image" content="https://nullpoworks.github.io/images/og-image.png">
   <meta property="og:url" content="https://nullpoworks.github.io/contact.html">
   <meta property="og:type" content="website">
@@ -38,7 +38,8 @@
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="メニュー" data-i18n-aria="hamburger.aria" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -48,34 +49,34 @@
 
   <main class="section contact-page" style="padding-top: calc(var(--header-height) + 60px);">
     <div class="container">
-      <h1 class="section-title section-title--sub">お問い合わせ</h1>
+      <h1 class="section-title section-title--sub" data-i18n="contact.title">お問い合わせ</h1>
 
       <div class="contact-body">
-        <p class="contact-lead">ご意見・ご感想・サポート・制作依頼など、お気軽にお問い合わせください。</p>
+        <p class="contact-lead" data-i18n="contact.lead">ご意見・ご感想・サポート・制作依頼など、お気軽にお問い合わせください。</p>
 
         <!-- Contact Form -->
         <form id="contact-form" class="contact-form" novalidate>
           <div class="form-group">
-            <label for="contact-category" class="form-label">お問い合わせ種別</label>
+            <label for="contact-category" class="form-label" data-i18n="contact.label.category">お問い合わせ種別</label>
             <select id="contact-category" name="category" class="form-input form-select" required>
-              <option value="" disabled selected>選択してください</option>
-              <option value="ご意見・ご感想">ご意見・ご感想</option>
-              <option value="不具合報告・サポート">不具合報告・サポート</option>
-              <option value="制作依頼・コラボレーション">制作依頼・コラボレーション</option>
-              <option value="その他">その他</option>
+              <option value="" disabled selected data-i18n="contact.option.default">選択してください</option>
+              <option value="ご意見・ご感想" data-i18n="contact.option.feedback">ご意見・ご感想</option>
+              <option value="不具合報告・サポート" data-i18n="contact.option.bug">不具合報告・サポート</option>
+              <option value="制作依頼・コラボレーション" data-i18n="contact.option.collab">制作依頼・コラボレーション</option>
+              <option value="その他" data-i18n="contact.option.other">その他</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="contact-name" class="form-label">お名前 <span class="form-optional">（任意）</span></label>
-            <input type="text" id="contact-name" name="name" class="form-input" placeholder="お名前" autocomplete="name" maxlength="100">
+            <label for="contact-name" class="form-label"><span data-i18n="contact.label.name">お名前</span> <span class="form-optional" data-i18n="contact.label.name.opt">（任意）</span></label>
+            <input type="text" id="contact-name" name="name" class="form-input" placeholder="お名前" data-i18n-placeholder="contact.ph.name" autocomplete="name" maxlength="100">
           </div>
           <div class="form-group">
-            <label for="contact-email" class="form-label">メールアドレス <span class="form-optional">（任意・返信を希望する場合）</span></label>
+            <label for="contact-email" class="form-label"><span data-i18n="contact.label.email">メールアドレス</span> <span class="form-optional" data-i18n="contact.label.email.opt">（任意・返信を希望する場合）</span></label>
             <input type="email" id="contact-email" name="email" class="form-input" placeholder="example@mail.com" autocomplete="email" maxlength="254">
           </div>
           <div class="form-group">
-            <label for="contact-message" class="form-label">お問い合わせ内容 <span class="form-required">*</span></label>
-            <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="お問い合わせ内容をご記入ください" required maxlength="2000" rows="6"></textarea>
+            <label for="contact-message" class="form-label"><span data-i18n="contact.label.message">お問い合わせ内容</span> <span class="form-required">*</span></label>
+            <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="お問い合わせ内容をご記入ください" data-i18n-placeholder="contact.ph.message" required maxlength="2000" rows="6"></textarea>
             <p class="form-char-count"><span id="char-count">0</span> / 2000</p>
           </div>
 
@@ -84,17 +85,17 @@
             <input type="text" name="website" tabindex="-1" autocomplete="off">
           </div>
 
-          <button type="submit" id="contact-submit" class="btn btn-primary contact-submit-btn">送信する</button>
+          <button type="submit" id="contact-submit" class="btn btn-primary contact-submit-btn" data-i18n="contact.submit">送信する</button>
 
           <div id="contact-status" class="contact-status" role="alert" aria-live="polite" hidden></div>
         </form>
 
         <!-- FAQ -->
         <div class="contact-faq" id="faq">
-          <h2 class="contact-faq-title">よくある質問</h2>
+          <h2 class="contact-faq-title" data-i18n="contact.faq.title">よくある質問</h2>
           <details class="faq-item">
-            <summary class="faq-question">PWA版で最新バージョンがプレイできない</summary>
-            <div class="faq-answer">
+            <summary class="faq-question" data-i18n="contact.faq.q1">PWA版で最新バージョンがプレイできない</summary>
+            <div class="faq-answer" data-i18n-html="contact.faq.a1">
               <p>PWA版（ホーム画面に追加したアプリ）はキャッシュの影響でアップデートが反映されない場合があります。以下の手順をお試しください。</p>
               <ol>
                 <li>ホーム画面のアプリを削除</li>
@@ -112,10 +113,10 @@
         </div>
 
         <div class="contact-alt">
-          <p>フォーム以外でのお問い合わせは、X (Twitter) のDMでも受け付けています。</p>
+          <p data-i18n="contact.alt.text">フォーム以外でのお問い合わせは、X (Twitter) のDMでも受け付けています。</p>
           <a href="https://x.com/nullpo_works" class="btn btn-store contact-x-btn" target="_blank" rel="noopener noreferrer">
             <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            @nullpo_works にDMする
+            <span data-i18n="contact.alt.btn">@nullpo_works にDMする</span>
           </a>
         </div>
       </div>
@@ -126,14 +127,15 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
-        <a href="privacy-policy.html" class="footer-link">プライバシーポリシー</a>
-        <a href="contact.html" class="footer-link">お問い合わせ</a>
+        <a href="privacy-policy.html" class="footer-link" data-i18n="footer.privacy" data-i18n-href="footer.privacy.href">プライバシーポリシー</a>
+        <a href="contact.html" class="footer-link" data-i18n="footer.contact">お問い合わせ</a>
         <a href="https://x.com/nullpo_works" class="footer-link" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
       </div>
       <p class="footer-copy">&copy; 2026 NullPo Works / Veriquest</p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
 </body>
