@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nullpoworks.github.io/</loc>
-    <lastmod>2026-02-24</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,19 +21,41 @@
   </url>
   <url>
     <loc>https://nullpoworks.github.io/privacy-policy-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nullpoworks.github.io/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nullpoworks.github.io/privacy-policy-en.html"/>
     <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://nullpoworks.github.io/terms-tamashii.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nullpoworks.github.io/terms-tamashii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nullpoworks.github.io/terms-tamashii-en.html"/>
     <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://nullpoworks.github.io/terms-tamashii-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nullpoworks.github.io/terms-tamashii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nullpoworks.github.io/terms-tamashii-en.html"/>
     <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nullpoworks.github.io/terms-14banchi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nullpoworks.github.io/terms-14banchi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nullpoworks.github.io/terms-14banchi-en.html"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nullpoworks.github.io/terms-14banchi-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nullpoworks.github.io/terms-14banchi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nullpoworks.github.io/terms-14banchi-en.html"/>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
