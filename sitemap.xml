@@ -59,4 +59,20 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://nullpoworks.github.io/terms-piyo-adventure.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nullpoworks.github.io/terms-piyo-adventure.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nullpoworks.github.io/terms-piyo-adventure-en.html"/>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nullpoworks.github.io/terms-piyo-adventure-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nullpoworks.github.io/terms-piyo-adventure.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nullpoworks.github.io/terms-piyo-adventure-en.html"/>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
