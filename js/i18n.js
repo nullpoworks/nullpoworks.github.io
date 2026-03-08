@@ -105,6 +105,9 @@ window.I18n = (function () {
       'contact.label.email.opt': '（任意・返信を希望する場合）',
       'contact.label.message': 'お問い合わせ内容',
       'contact.ph.message': 'お問い合わせ内容をご記入ください',
+      'contact.label.image': 'スクリーンショット',
+      'contact.label.image.opt': '（任意・5MBまで）',
+      'contact.image.btn': '画像を選択',
       'contact.submit': '送信する',
       'contact.faq.title': 'よくある質問',
       'contact.faq.q1': 'ホーム画面に追加したゲームが最新版にならない',
@@ -131,6 +134,9 @@ window.I18n = (function () {
       'js.contact.submitting': '送信中...',
       'js.contact.success': 'お問い合わせを送信しました。ありがとうございます。',
       'js.contact.error': '送信に失敗しました。時間を置いて再度お試しいただくか、X (Twitter) のDMよりご連絡ください。',
+      'js.contact.image_invalid_type': '画像ファイル（JPG, PNG, GIF, WebP）を選択してください。',
+      'js.contact.image_too_large': '画像サイズが大きすぎます（5MB以下にしてください）。',
+      'js.contact.confirm_image': '📎 画像添付あり',
       'js.contact.submit': '送信する',
 
       // --- 404.html ---
@@ -370,6 +376,9 @@ window.I18n = (function () {
       'contact.label.email.opt': '(Optional — if you need a reply)',
       'contact.label.message': 'Message',
       'contact.ph.message': 'Please enter your message',
+      'contact.label.image': 'Screenshot',
+      'contact.label.image.opt': '(Optional — up to 5MB)',
+      'contact.image.btn': 'Choose Image',
       'contact.submit': 'Send',
       'contact.faq.title': 'FAQ',
       'contact.faq.q1': 'Game added to home screen won\'t update to the latest version',
@@ -396,6 +405,9 @@ window.I18n = (function () {
       'js.contact.submitting': 'Sending...',
       'js.contact.success': 'Your message has been sent. Thank you!',
       'js.contact.error': 'Failed to send. Please try again later or contact us via X (Twitter) DM.',
+      'js.contact.image_invalid_type': 'Please select an image file (JPG, PNG, GIF, or WebP).',
+      'js.contact.image_too_large': 'Image is too large (maximum 5MB).',
+      'js.contact.confirm_image': '📎 Image attached',
       'js.contact.submit': 'Send',
 
       // --- 404.html ---
