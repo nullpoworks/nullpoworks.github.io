@@ -223,20 +223,7 @@
             <label for="chat-message" class="form-label"><span data-i18n="beta.chat.label.message">メッセージ</span> <span class="form-required">*</span></label>
             <textarea id="chat-message" name="message" class="form-input form-textarea" placeholder="例: 【魂の共鳴】フィーバー中にブロックが消えない&#10;&#10;バグの詳細、再現手順、ご意見など" data-i18n-placeholder="beta.chat.ph.message" required maxlength="2000" rows="4"></textarea>
           </div>
-          <div class="form-group">
-            <label class="form-label"><span data-i18n="beta.chat.label.image">スクリーンショット</span> <span class="form-optional" data-i18n="beta.chat.label.image.opt">（任意・5MBまで）</span></label>
-            <div class="chat-image-upload" id="chat-image-upload">
-              <input type="file" id="chat-image" name="image" accept="image/jpeg,image/png,image/gif,image/webp" hidden>
-              <button type="button" id="chat-image-btn" class="btn btn-secondary chat-image-btn">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-                <span data-i18n="beta.chat.image.btn">画像を選択</span>
-              </button>
-              <div id="chat-image-preview" class="chat-image-preview" hidden>
-                <img id="chat-image-preview-img" alt="" class="chat-image-preview-img">
-                <button type="button" id="chat-image-remove" class="chat-image-remove" aria-label="Remove image">&times;</button>
-              </div>
-            </div>
-          </div>
+          <p class="form-note" data-i18n-html="beta.chat.image.note">📷 スクリーンショットを送りたい場合は、<a href="https://x.com/nullpo_works" target="_blank" rel="noopener noreferrer">X (Twitter) のDM</a>に画像付きでお送りください。</p>
           <button type="submit" id="chat-submit" class="btn btn-primary beta-form-submit" data-i18n="beta.chat.submit">投稿する</button>
           <div id="chat-status" class="contact-status" role="alert" aria-live="polite" hidden></div>
         </form>

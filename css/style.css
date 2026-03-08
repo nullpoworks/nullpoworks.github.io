@@ -678,6 +678,17 @@ a:hover {
   opacity: 0.7;
 }
 
+.form-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.form-note a {
+  color: var(--accent-glow);
+  text-decoration: underline;
+}
+
 .contact-submit-btn {
   font-size: 1rem;
   padding: 14px 40px;
