@@ -59,6 +59,7 @@
       <!-- ========== ページ内ナビ ========== -->
       <nav class="beta-nav">
         <a href="#register" class="beta-nav-link" data-i18n="beta.nav.register">テスター登録</a>
+        <a href="#install-steps" class="beta-nav-link" data-i18n="beta.nav.steps">インストール手順</a>
         <a href="#tamashii" class="beta-nav-link" data-i18n="beta.nav.tamashii">魂の共鳴</a>
         <a href="#14banchi" class="beta-nav-link" data-i18n="beta.nav.14banchi">14番地</a>
         <a href="#chat" class="beta-nav-link" data-i18n="beta.nav.chat">バグ報告</a>
@@ -67,7 +68,17 @@
       <!-- ========== テスター登録 ========== -->
       <section class="beta-section" id="register">
         <h2 class="beta-section-title" data-i18n="beta.reg.title">テスター登録</h2>
-        <p class="beta-section-desc" data-i18n-html="beta.reg.desc">NullPo Worksのテスターとして登録すると、開発中のアプリをいち早く体験できます。<br>Google Playで使用しているGoogleアカウント（Gmailアドレス）を登録してください。<br>登録後、管理者がGoogle Playにアカウントを追加します。テストが稼働中のアプリは、通常24時間以内にダウンロード可能になります。<br>「準備中」と表示されているアプリは、テスト開始までしばらくお待ちください。</p>
+        <p class="beta-section-desc" data-i18n-html="beta.reg.desc">NullPo Worksのテスターとして登録すると、開発中のアプリをいち早く体験できます。<br>Google Playで使用しているGoogleアカウント（Gmailアドレス）を登録してください。</p>
+
+        <div class="beta-alert-body beta-reg-flow">
+          <p class="beta-alert-main" data-i18n-html="beta.reg.flow.title">&#x1F4CB; <strong>登録後の流れ</strong></p>
+          <div class="beta-reg-flow-steps">
+            <p data-i18n-html="beta.reg.flow.step1">1&#xFE0F;&#x20E3; 下のフォームからGmailアドレスを送信</p>
+            <p data-i18n-html="beta.reg.flow.step2">2&#xFE0F;&#x20E3; 管理者がGoogle Playにアカウントを追加（<strong>通常24時間以内</strong>）</p>
+            <p data-i18n-html="beta.reg.flow.step3">3&#xFE0F;&#x20E3; 追加完了後、各アプリの「テストに参加してインストールする」ボタンからインストール可能に</p>
+          </div>
+          <p class="beta-alert-desc" data-i18n="beta.reg.flow.note">※ 登録しただけではすぐにアプリをインストールできません。管理者がアカウントを追加するまでお待ちください。</p>
+        </div>
 
         <form id="register-form" class="beta-form" novalidate>
           <div class="form-group">
@@ -101,6 +112,61 @@
         </div>
       </section>
 
+      <!-- ========== インストール手順（共通） ========== -->
+      <section class="beta-section" id="install-steps">
+        <h2 class="beta-section-title" data-i18n="beta.steps.heading">インストール手順（3ステップ）</h2>
+        <p class="beta-section-desc" data-i18n="beta.steps.intro">各アプリの「テストに参加してインストールする」ボタンを押した後の流れは共通です。</p>
+
+        <div class="beta-steps">
+          <!-- Step 1 -->
+          <div class="beta-step">
+            <div class="beta-step-number">1</div>
+            <div class="beta-step-content">
+              <h4 class="beta-step-title" data-i18n="beta.steps.step1.title">「テスターになる」を押す</h4>
+              <p data-i18n-html="beta.steps.step1.p1">ボタンを押すと、下のような画面が開きます。<br>画面の一番下にある<strong>「テスターになる」</strong>ボタンを押してください。これがテストへの参加表明になります。</p>
+              <p class="beta-step-note" data-i18n-html="beta.steps.step1.note1">※ 最初は英語で <strong>"Become a tester"</strong> と表示される場合があります。下の画像は日本語に翻訳した状態です。ページを日本語に翻訳してから操作すると分かりやすいのでおすすめです。</p>
+              <div class="beta-step-image">
+                <img src="images/tester01.jpg" alt="ステップ1: テスターになるボタンを押す画面" data-i18n-alt="alt.tester.step1" loading="lazy">
+                <div class="beta-step-image-indicator" style="top: 79%; left: 8%; width: 43%; height: 7%;"></div>
+              </div>
+              <p class="beta-step-note" data-i18n="beta.steps.step1.note2">※ この画面が表示されない場合は、登録したGoogleアカウントでログインしているか確認してください。</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="beta-step">
+            <div class="beta-step-number">2</div>
+            <div class="beta-step-content">
+              <h4 class="beta-step-title" data-i18n="beta.steps.step2.title">「Google Play でダウンロード」を押す</h4>
+              <p data-i18n-html="beta.steps.step2.p1">「あなたはテスターです。」（英語では <strong>"You're a tester"</strong>）と表示されたら参加完了です！<br>画面の中にある青い文字の<strong>「Google Play でダウンロードしてください」</strong>（英語では <strong>"download it on Google Play"</strong>）というリンクを押してください。</p>
+              <div class="beta-step-image">
+                <img src="images/tester02.jpg" alt="ステップ2: Google Playでダウンロードリンクを押す画面" data-i18n-alt="alt.tester.step2" loading="lazy">
+                <div class="beta-step-image-indicator" style="top: 68.5%; left: 8%; width: 82%; height: 6%;"></div>
+              </div>
+              <p class="beta-step-note" data-i18n="beta.steps.step2.note1">※ リンクが有効になるまで数分かかる場合があります。表示されない場合は少し待ってからページを更新してください。</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="beta-step">
+            <div class="beta-step-number">3</div>
+            <div class="beta-step-content">
+              <h4 class="beta-step-title" data-i18n="beta.steps.step3.title">「インストール」を押す</h4>
+              <p data-i18n-html="beta.steps.step3.p1">Google Playのアプリページが開きます。<br>青色の<strong>「インストール」</strong>ボタンを押せば、ダウンロードが始まります。これで完了です！</p>
+              <div class="beta-step-image">
+                <img src="images/tester03.jpg" alt="ステップ3: インストールボタンを押す画面" data-i18n-alt="alt.tester.step3" loading="lazy">
+                <div class="beta-step-image-indicator" style="top: 46.5%; left: 2.5%; width: 94%; height: 7%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="beta-alert-body" style="margin-top: 1.5rem;">
+          <p class="beta-alert-main" data-i18n-html="beta.steps.launch.main">&#x1F4F2; <strong>インストール後、必ず一度アプリを起動してください。</strong></p>
+          <p class="beta-alert-desc" data-i18n="beta.steps.launch.desc">ダウンロードしただけではテストへの参加が完了しません。アプリを一度起動することで、正式にテスト参加者として登録されます。</p>
+        </div>
+      </section>
+
       <!-- ====================================================
            魂の共鳴
            ==================================================== -->
@@ -113,67 +179,12 @@
           </div>
         </div>
 
-        <!-- CTA -->
         <div class="beta-cta">
-          <p class="beta-cta-lead" data-i18n="beta.tamashii.cta.lead">アカウントの確認ができたら、下のボタンからテストに参加しましょう。</p>
           <a href="https://play.google.com/apps/testing/works.nullpo.tamashii" class="btn btn-primary beta-cta-btn" target="_blank" rel="noopener noreferrer">
             <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 13l2.303-2.492zM5.864 2.658L16.8 9.024l-2.302 2.302L5.864 2.658z"/></svg>
             <span data-i18n="beta.tamashii.cta.btn">テストに参加してインストールする</span>
           </a>
           <p class="beta-cta-note" data-i18n="beta.tamashii.cta.note">ボタンを押すと Google Play のテスト参加ページが開きます</p>
-        </div>
-
-        <!-- 3ステップガイド -->
-        <h3 class="beta-sub-heading" data-i18n="beta.tamashii.steps.heading">インストール手順（3ステップ）</h3>
-        <p class="beta-steps-intro" data-i18n="beta.tamashii.steps.intro">上のボタンを押した後の流れを、実際の画面で説明します。</p>
-
-        <div class="beta-steps">
-          <!-- Step 1 -->
-          <div class="beta-step">
-            <div class="beta-step-number">1</div>
-            <div class="beta-step-content">
-              <h4 class="beta-step-title" data-i18n="beta.tamashii.step1.title">「テスターになる」を押す</h4>
-              <p data-i18n-html="beta.tamashii.step1.p1">ボタンを押すと、下のような画面が開きます。<br>画面の一番下にある<strong>「テスターになる」</strong>ボタンを押してください。これがテストへの参加表明になります。</p>
-              <p class="beta-step-note" data-i18n-html="beta.tamashii.step1.note1">※ 最初は英語で <strong>"Become a tester"</strong> と表示される場合があります。下の画像は日本語に翻訳した状態です。ページを日本語に翻訳してから操作すると分かりやすいのでおすすめです。</p>
-              <div class="beta-step-image">
-                <img src="images/tester01.jpg" alt="ステップ1: テスターになるボタンを押す画面" data-i18n-alt="alt.tester.step1" loading="lazy">
-                <div class="beta-step-image-indicator" style="top: 79%; left: 8%; width: 43%; height: 7%;"></div>
-              </div>
-              <p class="beta-step-note" data-i18n="beta.tamashii.step1.note2">※ この画面が表示されない場合は、登録したGoogleアカウントでログインしているか確認してください。</p>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="beta-step">
-            <div class="beta-step-number">2</div>
-            <div class="beta-step-content">
-              <h4 class="beta-step-title" data-i18n="beta.tamashii.step2.title">「Google Play でダウンロード」を押す</h4>
-              <p data-i18n-html="beta.tamashii.step2.p1">「あなたはテスターです。」（英語では <strong>"You're a tester"</strong>）と表示されたら参加完了です！<br>画面の中にある青い文字の<strong>「Google Play でダウンロードしてください」</strong>（英語では <strong>"download it on Google Play"</strong>）というリンクを押してください。</p>
-              <div class="beta-step-image">
-                <img src="images/tester02.jpg" alt="ステップ2: Google Playでダウンロードリンクを押す画面" data-i18n-alt="alt.tester.step2" loading="lazy">
-                <div class="beta-step-image-indicator" style="top: 68.5%; left: 8%; width: 82%; height: 6%;"></div>
-              </div>
-              <p class="beta-step-note" data-i18n="beta.tamashii.step2.note1">※ リンクが有効になるまで数分かかる場合があります。表示されない場合は少し待ってからページを更新してください。</p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="beta-step">
-            <div class="beta-step-number">3</div>
-            <div class="beta-step-content">
-              <h4 class="beta-step-title" data-i18n="beta.tamashii.step3.title">「インストール」を押す</h4>
-              <p data-i18n-html="beta.tamashii.step3.p1">Google Playのアプリページが開きます。<br>青色の<strong>「インストール」</strong>ボタンを押せば、ダウンロードが始まります。これで完了です！</p>
-              <div class="beta-step-image">
-                <img src="images/tester03.jpg" alt="ステップ3: インストールボタンを押す画面" data-i18n-alt="alt.tester.step3" loading="lazy">
-                <div class="beta-step-image-indicator" style="top: 46.5%; left: 2.5%; width: 94%; height: 7%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="beta-alert-body" style="margin-top: 1.5rem;">
-          <p class="beta-alert-main" data-i18n-html="beta.tamashii.launch.main">&#x1F4F2; <strong>インストール後、必ず一度アプリを起動してください。</strong></p>
-          <p class="beta-alert-desc" data-i18n="beta.tamashii.launch.desc">ダウンロードしただけではテストへの参加が完了しません。アプリを一度起動することで、正式にテスト参加者として登録されます。</p>
         </div>
       </section>
 
@@ -189,67 +200,12 @@
           </div>
         </div>
 
-        <!-- CTA -->
         <div class="beta-cta">
-          <p class="beta-cta-lead" data-i18n="beta.14banchi.cta.lead">アカウントの確認ができたら、下のボタンからテストに参加しましょう。</p>
           <a href="https://play.google.com/apps/testing/com.nullpoworks.banchi14" class="btn btn-primary beta-cta-btn" target="_blank" rel="noopener noreferrer">
             <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 13l2.303-2.492zM5.864 2.658L16.8 9.024l-2.302 2.302L5.864 2.658z"/></svg>
             <span data-i18n="beta.14banchi.cta.btn">テストに参加してインストールする</span>
           </a>
           <p class="beta-cta-note" data-i18n="beta.14banchi.cta.note">ボタンを押すと Google Play のテスト参加ページが開きます</p>
-        </div>
-
-        <!-- 3ステップガイド -->
-        <h3 class="beta-sub-heading" data-i18n="beta.14banchi.steps.heading">インストール手順（3ステップ）</h3>
-        <p class="beta-steps-intro" data-i18n="beta.14banchi.steps.intro">上のボタンを押した後の流れを、実際の画面で説明します。</p>
-
-        <div class="beta-steps">
-          <!-- Step 1 -->
-          <div class="beta-step">
-            <div class="beta-step-number">1</div>
-            <div class="beta-step-content">
-              <h4 class="beta-step-title" data-i18n="beta.14banchi.step1.title">「テスターになる」を押す</h4>
-              <p data-i18n-html="beta.14banchi.step1.p1">ボタンを押すと、下のような画面が開きます。<br>画面の一番下にある<strong>「テスターになる」</strong>ボタンを押してください。これがテストへの参加表明になります。</p>
-              <p class="beta-step-note" data-i18n-html="beta.14banchi.step1.note1">※ 最初は英語で <strong>"Become a tester"</strong> と表示される場合があります。下の画像は日本語に翻訳した状態です。ページを日本語に翻訳してから操作すると分かりやすいのでおすすめです。</p>
-              <div class="beta-step-image">
-                <img src="images/tester01.jpg" alt="ステップ1: テスターになるボタンを押す画面" data-i18n-alt="alt.tester.step1" loading="lazy">
-                <div class="beta-step-image-indicator" style="top: 79%; left: 8%; width: 43%; height: 7%;"></div>
-              </div>
-              <p class="beta-step-note" data-i18n="beta.14banchi.step1.note2">※ この画面が表示されない場合は、登録したGoogleアカウントでログインしているか確認してください。</p>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="beta-step">
-            <div class="beta-step-number">2</div>
-            <div class="beta-step-content">
-              <h4 class="beta-step-title" data-i18n="beta.14banchi.step2.title">「Google Play でダウンロード」を押す</h4>
-              <p data-i18n-html="beta.14banchi.step2.p1">「あなたはテスターです。」（英語では <strong>"You're a tester"</strong>）と表示されたら参加完了です！<br>画面の中にある青い文字の<strong>「Google Play でダウンロードしてください」</strong>（英語では <strong>"download it on Google Play"</strong>）というリンクを押してください。</p>
-              <div class="beta-step-image">
-                <img src="images/tester02.jpg" alt="ステップ2: Google Playでダウンロードリンクを押す画面" data-i18n-alt="alt.tester.step2" loading="lazy">
-                <div class="beta-step-image-indicator" style="top: 68.5%; left: 8%; width: 82%; height: 6%;"></div>
-              </div>
-              <p class="beta-step-note" data-i18n="beta.14banchi.step2.note1">※ リンクが有効になるまで数分かかる場合があります。表示されない場合は少し待ってからページを更新してください。</p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="beta-step">
-            <div class="beta-step-number">3</div>
-            <div class="beta-step-content">
-              <h4 class="beta-step-title" data-i18n="beta.14banchi.step3.title">「インストール」を押す</h4>
-              <p data-i18n-html="beta.14banchi.step3.p1">Google Playのアプリページが開きます。<br>青色の<strong>「インストール」</strong>ボタンを押せば、ダウンロードが始まります。これで完了です！</p>
-              <div class="beta-step-image">
-                <img src="images/tester03.jpg" alt="ステップ3: インストールボタンを押す画面" data-i18n-alt="alt.tester.step3" loading="lazy">
-                <div class="beta-step-image-indicator" style="top: 46.5%; left: 2.5%; width: 94%; height: 7%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="beta-alert-body" style="margin-top: 1.5rem;">
-          <p class="beta-alert-main" data-i18n-html="beta.14banchi.launch.main">&#x1F4F2; <strong>インストール後、必ず一度アプリを起動してください。</strong></p>
-          <p class="beta-alert-desc" data-i18n="beta.14banchi.launch.desc">ダウンロードしただけではテストへの参加が完了しません。アプリを一度起動することで、正式にテスト参加者として登録されます。</p>
         </div>
       </section>
 
@@ -266,6 +222,20 @@
           <div class="form-group">
             <label for="chat-message" class="form-label"><span data-i18n="beta.chat.label.message">メッセージ</span> <span class="form-required">*</span></label>
             <textarea id="chat-message" name="message" class="form-input form-textarea" placeholder="例: 【魂の共鳴】フィーバー中にブロックが消えない&#10;&#10;バグの詳細、再現手順、ご意見など" data-i18n-placeholder="beta.chat.ph.message" required maxlength="2000" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-i18n="beta.chat.label.image">スクリーンショット</span> <span class="form-optional" data-i18n="beta.chat.label.image.opt">（任意・5MBまで）</span></label>
+            <div class="chat-image-upload" id="chat-image-upload">
+              <input type="file" id="chat-image" name="image" accept="image/jpeg,image/png,image/gif,image/webp" hidden>
+              <button type="button" id="chat-image-btn" class="btn btn-secondary chat-image-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <span data-i18n="beta.chat.image.btn">画像を選択</span>
+              </button>
+              <div id="chat-image-preview" class="chat-image-preview" hidden>
+                <img id="chat-image-preview-img" alt="" class="chat-image-preview-img">
+                <button type="button" id="chat-image-remove" class="chat-image-remove" aria-label="Remove image">&times;</button>
+              </div>
+            </div>
           </div>
           <button type="submit" id="chat-submit" class="btn btn-primary beta-form-submit" data-i18n="beta.chat.submit">投稿する</button>
           <div id="chat-status" class="contact-status" role="alert" aria-live="polite" hidden></div>

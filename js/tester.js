@@ -19,6 +19,15 @@
   var chatStatus = document.getElementById('chat-status');
   var chatList = document.getElementById('chat-list');
 
+  // ===== 画像添付 =====
+  var chatImageInput = document.getElementById('chat-image');
+  var chatImageBtn = document.getElementById('chat-image-btn');
+  var chatImagePreview = document.getElementById('chat-image-preview');
+  var chatImagePreviewImg = document.getElementById('chat-image-preview-img');
+  var chatImageRemove = document.getElementById('chat-image-remove');
+  var chatImageBase64 = null;
+  var MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
+
   if (!regForm && !chatForm) return;
 
   // ===== ステータス表示 =====
@@ -55,6 +64,9 @@
       html += '<div class="beta-chat-msg">';
       html += '<div class="beta-chat-meta"><span class="beta-chat-name">' + name + '</span><span class="beta-chat-date">' + date + '</span></div>';
       html += '<p class="beta-chat-text">' + message.replace(/\n/g, '<br>') + '</p>';
+      if (data[i].imageUrl) {
+        html += '<div class="beta-chat-image"><a href="' + escapeHtml(data[i].imageUrl) + '" target="_blank" rel="noopener noreferrer"><img src="' + escapeHtml(data[i].imageUrl) + '" alt="' + escapeHtml(I18n.t('js.tester.image_alt')) + '" loading="lazy"></a></div>';
+      }
       html += '</div>';
     }
     chatList.innerHTML = html;
@@ -137,6 +149,45 @@
     });
   }
 
+  // ===== 画像添付ハンドラ =====
+  if (chatImageBtn && chatImageInput) {
+    chatImageBtn.addEventListener('click', function () {
+      chatImageInput.click();
+    });
+
+    chatImageInput.addEventListener('change', function () {
+      var file = chatImageInput.files[0];
+      if (!file) return;
+
+      if (!file.type.match(/^image\/(jpeg|png|gif|webp)$/)) {
+        showStatus(chatStatus, I18n.t('js.tester.image_invalid_type'), 'error');
+        chatImageInput.value = '';
+        return;
+      }
+      if (file.size > MAX_IMAGE_SIZE) {
+        showStatus(chatStatus, I18n.t('js.tester.image_too_large'), 'error');
+        chatImageInput.value = '';
+        return;
+      }
+
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        chatImageBase64 = e.target.result;
+        chatImagePreviewImg.src = chatImageBase64;
+        chatImagePreview.hidden = false;
+        showStatus(chatStatus, '', '');
+      };
+      reader.readAsDataURL(file);
+    });
+
+    chatImageRemove.addEventListener('click', function () {
+      chatImageBase64 = null;
+      chatImageInput.value = '';
+      chatImagePreviewImg.src = '';
+      chatImagePreview.hidden = true;
+    });
+  }
+
   // ===== チャットフォーム =====
   if (chatForm) {
     chatForm.addEventListener('submit', function (e) {
@@ -154,9 +205,11 @@
         return;
       }
 
+      var hasImage = !!chatImageBase64;
       var confirmMsg = I18n.t('js.tester.chat_confirm') + '\n\n'
         + I18n.t('js.tester.chat_confirm_name') + ': ' + (name || I18n.t('js.tester.anonymous')) + '\n'
-        + I18n.t('js.tester.chat_confirm_message') + ': ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
+        + I18n.t('js.tester.chat_confirm_message') + ': ' + (message.length > 80 ? message.substring(0, 80) + '...' : message)
+        + (hasImage ? '\n' + I18n.t('js.tester.chat_confirm_image') : '');
       if (!confirm(confirmMsg)) return;
 
       chatSubmit.disabled = true;
@@ -169,6 +222,9 @@
         message: message,
         timestamp: new Date().toISOString()
       };
+      if (chatImageBase64) {
+        payload.image = chatImageBase64;
+      }
 
       fetch(GAS_URL, {
         method: 'POST',
@@ -179,6 +235,11 @@
         .then(function () {
           showStatus(chatStatus, I18n.t('js.tester.chat_success'), 'success');
           chatForm.reset();
+          // 画像プレビューもリセット
+          chatImageBase64 = null;
+          if (chatImageInput) chatImageInput.value = '';
+          if (chatImagePreviewImg) chatImagePreviewImg.src = '';
+          if (chatImagePreview) chatImagePreview.hidden = true;
           setTimeout(loadData, 2000);
         })
         .catch(function () {

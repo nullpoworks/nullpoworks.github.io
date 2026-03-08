@@ -13,12 +13,60 @@
   var messageEl = document.getElementById('contact-message');
   var charCountEl = document.getElementById('char-count');
 
+  // ===== 画像添付 =====
+  var contactImageInput = document.getElementById('contact-image');
+  var contactImageBtn = document.getElementById('contact-image-btn');
+  var contactImagePreview = document.getElementById('contact-image-preview');
+  var contactImagePreviewImg = document.getElementById('contact-image-preview-img');
+  var contactImageRemove = document.getElementById('contact-image-remove');
+  var contactImageBase64 = null;
+  var MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
+
   if (!form) return;
 
   // Character count
   if (messageEl && charCountEl) {
     messageEl.addEventListener('input', function () {
       charCountEl.textContent = messageEl.value.length;
+    });
+  }
+
+  // ===== 画像添付ハンドラ =====
+  if (contactImageBtn && contactImageInput) {
+    contactImageBtn.addEventListener('click', function () {
+      contactImageInput.click();
+    });
+
+    contactImageInput.addEventListener('change', function () {
+      var file = contactImageInput.files[0];
+      if (!file) return;
+
+      if (!file.type.match(/^image\/(jpeg|png|gif|webp)$/)) {
+        showStatus(I18n.t('js.contact.image_invalid_type'), 'error');
+        contactImageInput.value = '';
+        return;
+      }
+      if (file.size > MAX_IMAGE_SIZE) {
+        showStatus(I18n.t('js.contact.image_too_large'), 'error');
+        contactImageInput.value = '';
+        return;
+      }
+
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        contactImageBase64 = e.target.result;
+        contactImagePreviewImg.src = contactImageBase64;
+        contactImagePreview.hidden = false;
+        showStatus('', '');
+      };
+      reader.readAsDataURL(file);
+    });
+
+    contactImageRemove.addEventListener('click', function () {
+      contactImageBase64 = null;
+      contactImageInput.value = '';
+      contactImagePreviewImg.src = '';
+      contactImagePreview.hidden = true;
     });
   }
 
@@ -59,11 +107,13 @@
       return;
     }
 
+    var hasImage = !!contactImageBase64;
     var confirmMsg = I18n.t('js.contact.confirm') + '\n\n'
       + I18n.t('js.contact.confirm_category') + ': ' + category + '\n'
       + I18n.t('js.contact.confirm_name') + ': ' + (name || I18n.t('js.contact.not_entered')) + '\n'
       + I18n.t('js.contact.confirm_email') + ': ' + (email || I18n.t('js.contact.not_entered')) + '\n'
-      + I18n.t('js.contact.confirm_message') + ': ' + (message.length > 80 ? message.substring(0, 80) + '...' : message);
+      + I18n.t('js.contact.confirm_message') + ': ' + (message.length > 80 ? message.substring(0, 80) + '...' : message)
+      + (hasImage ? '\n' + I18n.t('js.contact.confirm_image') : '');
     if (!confirm(confirmMsg)) return;
 
     // Disable button
@@ -78,6 +128,9 @@
       message: message,
       timestamp: new Date().toISOString()
     };
+    if (contactImageBase64) {
+      payload.image = contactImageBase64;
+    }
 
     fetch(GAS_URL, {
       method: 'POST',
@@ -91,6 +144,11 @@
         showStatus(I18n.t('js.contact.success'), 'success');
         form.reset();
         if (charCountEl) charCountEl.textContent = '0';
+        // 画像プレビューもリセット
+        contactImageBase64 = null;
+        if (contactImageInput) contactImageInput.value = '';
+        if (contactImagePreviewImg) contactImagePreviewImg.src = '';
+        if (contactImagePreview) contactImagePreview.hidden = true;
       })
       .catch(function () {
         showStatus(I18n.t('js.contact.error'), 'error');
