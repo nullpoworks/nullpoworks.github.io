@@ -19,6 +19,8 @@
   var chatStatus = document.getElementById('chat-status');
   var chatList = document.getElementById('chat-list');
 
+  var lastChatData = null;
+
   if (!regForm && !chatForm) return;
 
   // ===== ステータス表示 =====
@@ -43,15 +45,16 @@
   // ===== チャット一覧を表示 =====
   function renderChat(data) {
     if (!chatList) return;
-    if (!data || data.length === 0) {
+    if (data !== undefined) lastChatData = data;
+    if (!lastChatData || lastChatData.length === 0) {
       chatList.innerHTML = '<p class="beta-list-empty">' + escapeHtml(I18n.t('js.tester.no_posts')) + '</p>';
       return;
     }
     var html = '';
-    for (var i = 0; i < data.length; i++) {
-      var name = escapeHtml(data[i].name || I18n.t('js.tester.anonymous'));
-      var message = escapeHtml(data[i].message || '');
-      var date = formatDate(data[i].timestamp);
+    for (var i = 0; i < lastChatData.length; i++) {
+      var name = escapeHtml(lastChatData[i].name || I18n.t('js.tester.anonymous'));
+      var message = escapeHtml(lastChatData[i].message || '');
+      var date = formatDate(lastChatData[i].timestamp);
       html += '<div class="beta-chat-msg">';
       html += '<div class="beta-chat-meta"><span class="beta-chat-name">' + name + '</span><span class="beta-chat-date">' + date + '</span></div>';
       html += '<p class="beta-chat-text">' + message.replace(/\n/g, '<br>') + '</p>';
@@ -190,6 +193,11 @@
         });
     });
   }
+
+  // ===== 言語切替時に再描画 =====
+  document.addEventListener('languagechange', function () {
+    renderChat();
+  });
 
   // ===== 初回読み込み =====
   loadData();
