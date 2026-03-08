@@ -68,7 +68,17 @@
       <!-- ========== テスター登録 ========== -->
       <section class="beta-section" id="register">
         <h2 class="beta-section-title" data-i18n="beta.reg.title">テスター登録</h2>
-        <p class="beta-section-desc" data-i18n-html="beta.reg.desc">NullPo Worksのテスターとして登録すると、開発中のアプリをいち早く体験できます。<br>Google Playで使用しているGoogleアカウント（Gmailアドレス）を登録してください。<br>登録後、管理者がGoogle Playにアカウントを追加します。テストが稼働中のアプリは、通常24時間以内にダウンロード可能になります。<br>「準備中」と表示されているアプリは、テスト開始までしばらくお待ちください。</p>
+        <p class="beta-section-desc" data-i18n-html="beta.reg.desc">NullPo Worksのテスターとして登録すると、開発中のアプリをいち早く体験できます。<br>Google Playで使用しているGoogleアカウント（Gmailアドレス）を登録してください。</p>
+
+        <div class="beta-alert-body beta-reg-flow">
+          <p class="beta-alert-main" data-i18n-html="beta.reg.flow.title">&#x1F4CB; <strong>登録後の流れ</strong></p>
+          <div class="beta-reg-flow-steps">
+            <p data-i18n-html="beta.reg.flow.step1">1&#xFE0F;&#x20E3; 下のフォームからGmailアドレスを送信</p>
+            <p data-i18n-html="beta.reg.flow.step2">2&#xFE0F;&#x20E3; 管理者がGoogle Playにアカウントを追加（<strong>通常24時間以内</strong>）</p>
+            <p data-i18n-html="beta.reg.flow.step3">3&#xFE0F;&#x20E3; 追加完了後、各アプリの「テストに参加してインストールする」ボタンからインストール可能に</p>
+          </div>
+          <p class="beta-alert-desc" data-i18n="beta.reg.flow.note">※ 登録しただけではすぐにアプリをインストールできません。管理者がアカウントを追加するまでお待ちください。</p>
+        </div>
 
         <form id="register-form" class="beta-form" novalidate>
           <div class="form-group">
@@ -212,6 +222,20 @@
           <div class="form-group">
             <label for="chat-message" class="form-label"><span data-i18n="beta.chat.label.message">メッセージ</span> <span class="form-required">*</span></label>
             <textarea id="chat-message" name="message" class="form-input form-textarea" placeholder="例: 【魂の共鳴】フィーバー中にブロックが消えない&#10;&#10;バグの詳細、再現手順、ご意見など" data-i18n-placeholder="beta.chat.ph.message" required maxlength="2000" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label"><span data-i18n="beta.chat.label.image">スクリーンショット</span> <span class="form-optional" data-i18n="beta.chat.label.image.opt">（任意・5MBまで）</span></label>
+            <div class="chat-image-upload" id="chat-image-upload">
+              <input type="file" id="chat-image" name="image" accept="image/jpeg,image/png,image/gif,image/webp" hidden>
+              <button type="button" id="chat-image-btn" class="btn btn-secondary chat-image-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <span data-i18n="beta.chat.image.btn">画像を選択</span>
+              </button>
+              <div id="chat-image-preview" class="chat-image-preview" hidden>
+                <img id="chat-image-preview-img" alt="" class="chat-image-preview-img">
+                <button type="button" id="chat-image-remove" class="chat-image-remove" aria-label="Remove image">&times;</button>
+              </div>
+            </div>
           </div>
           <button type="submit" id="chat-submit" class="btn btn-primary beta-form-submit" data-i18n="beta.chat.submit">投稿する</button>
           <div id="chat-status" class="contact-status" role="alert" aria-live="polite" hidden></div>
