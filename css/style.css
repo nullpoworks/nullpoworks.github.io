@@ -965,6 +965,13 @@ a:hover {
   line-height: 1.9;
 }
 
+.beta-hero-note {
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 /* Sections */
 .beta-section {
   margin-bottom: 40px;
