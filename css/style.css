@@ -969,6 +969,16 @@ a:hover {
   font-size: 1.25rem;
 }
 
+.beta-android-banner-link {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.beta-android-banner-link:hover {
+  color: var(--accent-light, #a78bfa);
+}
+
 .beta-hero {
   text-align: center;
   margin-bottom: 48px;
