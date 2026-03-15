@@ -31,6 +31,7 @@ window.I18n = (function () {
       'game.tamashii.desc': 'ブロックが砂粒に変化し、同色の砂を左右に繋げて浄化していくパズルゲーム。ヨガの修行僧が邪気を祓う独自の世界観。',
       'game.tamashii.lang': '日本語 / English',
       'game.tamashii.play': 'Web版で遊ぶ',
+      'game.tamashii.gplay': 'Google Play - テスター募集中',
       // ぴよ氏の冒険
       'game.piyo.title': 'ぴよ氏の冒険',
       'game.piyo.tag1': 'エンドレスラン',
@@ -43,6 +44,7 @@ window.I18n = (function () {
       'game.14banchi.desc': '不気味な夜道を歩き、街の「異変」を見つけて正しい判断で14番地を目指す横スクロール2Dホラーゲーム。',
       'game.14banchi.lang': '日本語',
       'game.14banchi.play': 'Web版で遊ぶ',
+      'game.14banchi.gplay': 'Google Play - テスター募集中',
       // 画像alt
       'alt.tamashii.hero': '魂の共鳴 ～私を信じて～ スクリーンショット',
       'alt.piyo.hero': 'ぴよ氏の冒険 スクリーンショット',
@@ -293,6 +295,7 @@ window.I18n = (function () {
       'game.tamashii.desc': 'A puzzle game where blocks turn into grains of sand — connect same-colored sand to purify them. A unique world where a yoga monk banishes evil spirits.',
       'game.tamashii.lang': 'Japanese / English',
       'game.tamashii.play': 'Play Web Version',
+      'game.tamashii.gplay': 'Google Play - Testers Wanted',
       // Piyo-shi no Bouken
       'game.piyo.title': "Piyo's Adventure",
       'game.piyo.tag1': 'Endless Runner',
@@ -305,6 +308,7 @@ window.I18n = (function () {
       'game.14banchi.desc': 'A side-scrolling 2D horror game where you walk through eerie streets at night, spot anomalies, and make the right choices to reach 14-banchi.',
       'game.14banchi.lang': 'Japanese',
       'game.14banchi.play': 'Play Web Version',
+      'game.14banchi.gplay': 'Google Play - Testers Wanted',
       // Image alt
       'alt.tamashii.hero': 'Tamashii no Kyoumei ~Believe in Me~ Screenshot',
       'alt.piyo.hero': "Piyo's Adventure Screenshot",
